@@ -22,7 +22,7 @@ const router = require("./routers/index"); // require the father router in the r
 app.use(router);
 
 // require and user error handler middleware
-const { errorHandler } = require("./middleware/errorMiddleware"); // require the error handler middleware
+const { errorHandler } = require("./middlewares/errorMiddleware"); // require the error handler middleware
 app.use(errorHandler);
 
 //run the server
