@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 // create an web server
 const app = express();
 
-// require global middleware
+// register global middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
@@ -16,10 +16,14 @@ app.use(cors());
 // require authentication middleware
 
 //require router modules
+const router = require("./routers/index"); // require the father router in the routers folder
 
 // use router modules
+app.use(router);
 
-// user error handler middleware
+// require and user error handler middleware
+const { errorHandler } = require("./middleware/errorMiddleware"); // require the error handler middleware
+app.use(errorHandler);
 
 //run the server
 app.listen(50009, () => {
