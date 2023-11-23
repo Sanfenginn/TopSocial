@@ -11,6 +11,9 @@ const app = express();
 // require global middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cors());
+
+// require authentication middleware
 
 //require router modules
 
