@@ -16,6 +16,8 @@ app.use(express.json());
 
 // use router modules
 
+// user error handler middleware
+
 //run the server
 app.listen(50009, () => {
   console.log("Server is running on http://localhost:50009");
