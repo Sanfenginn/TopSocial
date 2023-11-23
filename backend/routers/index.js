@@ -1,4 +1,4 @@
-// link to the index.js outside of the routers folder,总路由，把其他的js都挂载进来
+// link to the index.js outside of the routers folder, which is the father router
 
 const express = require("express");
 const axios = require("axios");
@@ -13,5 +13,9 @@ const router = express.Router();
 
 //use the child routers
 router.use("/api", profileRouter);
+router.use("/api", cardsRouter);
+router.use("/api", messageRouter);
+router.use("/api", highlineRouter);
+router.use("/api", requestRouter);
 
 module.exports = router;
