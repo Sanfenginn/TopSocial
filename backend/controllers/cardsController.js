@@ -3,6 +3,9 @@ const axios = require("axios");
 const uniqueUrl = "http://localhost:50010/cards";
 
 const getCards = async (req, res, next) => {
+  if (req.query.id) {
+    return getCardsById(req, res, next);
+  }
   try {
     const axiosResponse = await axios.get(uniqueUrl); //返回的promise对象就包括了data
     console.log("response: ", axiosResponse.data);
@@ -26,7 +29,7 @@ const getCardsById = async (req, res, next) => {
   try {
     const axiosResponse = await axios.get(`${uniqueUrl}?id=${id}`); //返回的promise对象就包括了data
     console.log("response: ", axiosResponse.data);
-    if (!axiosResponse.data) {
+    if (axiosResponse.data.length === 0) {
       return res.status(404).json({
         status: 404,
         msg: "card not found",
