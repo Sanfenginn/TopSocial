@@ -1,8 +1,10 @@
 const express = require("express");
-const axios = require("axios");
 const profileRouter = express.Router();
+const { getProfile } = require("../controllers/profileController");
+// require callback function from profileController.js
+//reminder:require a callback function, need to use {};
 
-//.then .catch 方法
+//.then .catch method
 // profileRouter.get("/profile", (req, res, next) => {
 //   const url = "http://localhost:50010/profile";
 //   axios
@@ -23,21 +25,8 @@ const profileRouter = express.Router();
 //     });
 // });
 
-// async/await方法
-profileRouter.get("/profile", async (req, res, next) => {
-  try {
-    const url = "http://localhost:50010/profile";
-    const responseDate = await axios.get(url);
-    console.log("response: ", responseDate.data);
-    res.status(200).json({
-      status: 200,
-      msg: "get profile successfully",
-      data: responseDate.data,
-    });
-  } catch (error) {
-    console.error("error: ", error);
-    next(error);
-  }
-});
+// async/await method, use with try/catch
+profileRouter.get("/profile", getProfile);
+// use the callback function from profileController.js
 
 module.exports = profileRouter;
