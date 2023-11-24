@@ -26,7 +26,7 @@ const { getProfile } = require("../controllers/profileController");
 // });
 
 // async/await method, use with try/catch
-profileRouter.get("/profile", getProfile);
+profileRouter.get("/", getProfile);
 // use the callback function from profileController.js
 
 module.exports = profileRouter;

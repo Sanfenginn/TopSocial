@@ -16,10 +16,10 @@ app.use(cors());
 // require authentication middleware
 
 //require router modules
-const router = require("./routers/index"); // require the father router in the routers folder
+const router = require("./routers/index"); // require the parent router in the routers folder
 
 // use router modules
-app.use(router);
+app.use("/api", router);
 
 // require and user error handler middleware
 const { errorHandler } = require("./middlewares/errorMiddleware"); // require the error handler middleware
