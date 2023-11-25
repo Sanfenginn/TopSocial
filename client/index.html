@@ -7,15 +7,371 @@
     <meta name="description" content="This is a TopSocial website" />
     <meta name="keyword" content="html css javascript vite node.js express" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/src/icon-browser-tab.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/index.css" />
-    <script type="module" src="/index.js" defer></script>
+    <link
+      rel="icon"
+      href="/client/images/icon-browser-tab.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/client/index.css" />
+    <script type="module" src="/client/index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/997ebdf795.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="theme-color" content="#cad2c5" />
   </head>
   <body>
-    <div id="app">Hello World!</div>
-    <header><h1></h1></header>
-    <nav></nav>
-    <main></main>
-    <footer><p>&copy; 2023 Jinyuan Zhang. All Rights Reserved.</p></footer>
+    <section class="container">
+      <!-- HEADER, INCLUDE BRAND NAME, SEARCH BAR AND CREATE BUTTON, PROFILE BUTTON -->
+      <header class="header-container">
+        <!--  LOGO, BRAND NAME -->
+        <div class="logo">TOPSOCIAL</div>
+        <!-- SEARCH BAR -->
+        <div class="search-bar header-search-bar">
+          <i class="fas fa-search"></i>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search for Creators"
+          />
+        </div>
+        <!-- CREATING BUTTON AND PROFILE PHOTO -->
+        <div class="create-profile">
+          <label for="post-input-text" class="button button-primary"
+            >Create</label
+          >
+          <img
+            src="../client/images/profile/profile_8.png"
+            alt="profile-photo"
+            class="profile"
+          />
+        </div>
+      </header>
+      <main class="main">
+        <!-- MAIN LEFT -->
+        <section class="main-left">
+          <div class="card1 main-left__profile">
+            <a href="/">
+              <img
+                src="../client/images/profile/profile_8.png"
+                alt="profile-photo"
+                class="profile main-left__profile-photo"
+              />
+            </a>
+            <div class="main-left__information">
+              <div class="name">Jinyuan Zhang</div>
+              <small class="username">@jinyuan1992</small>
+            </div>
+          </div>
+          <div class="card1 navbar">
+            <a><i class="fas fa-home"></i>Home</a>
+            <a><i class="fas fa-compass"></i>Explore</a>
+            <a><i class="fas fa-bell"></i>Notifications</a>
+            <a><i class="fa-solid fa-envelope"></i>Messages</a>
+            <a><i class="fas fa-bookmark"></i>Bookmarks</a>
+            <a><i class="fas fa-chart-area"></i>Analytics</a>
+            <a><i class="fas fa-book-reader"></i>Theme</a>
+            <a><i class="fa-solid fa-gear"></i>Setting</a>
+          </div>
+          <label for="create-post" class="button button-create-post"
+            >Create Post</label
+          >
+        </section>
+        <!-- MAIN MIDDLE -->
+        <section class="main-middle">
+          <!-- HIGHLINE -->
+          <div class="highline-container">
+            <section class="highline highline-container__picture1">
+              <img
+                src="../client/images/profile/profile_8.png"
+                alt="profile-photo"
+                class="highline-profile"
+              />
+              <img
+                src="./images/highline/highline_1.jpeg"
+                alt="highline-1"
+                class="highline__picture"
+              />
+              <small class="highline__small">Your Stories</small>
+            </section>
+            <section class="highline highline-container__picture2">
+              <img
+                src="../client/images/profile/profile_6.png"
+                alt="profile-photo"
+                class="highline-profile"
+              />
+              <img
+                src="./images/highline/highline_2.jpeg"
+                alt="highline-2"
+                class="highline__picture"
+              />
+              <small class="highline__small">Your view</small>
+            </section>
+            <section class="highline highline-container__picture3">
+              <img
+                src="../client/images/profile/profile_5.png"
+                alt="profile-photo"
+                class="highline-profile"
+              />
+              <img
+                src="./images/highline/highline_3.jpeg"
+                alt="highline-1"
+                class="highline__picture"
+              />
+              <small class="highline__small">Your Emotion</small>
+            </section>
+            <section class="highline highline-container__picture4">
+              <img
+                src="../client/images/profile/profile_4.png"
+                alt="profile-photo"
+                class="highline-profile"
+              />
+              <img
+                src="./images/highline/highline_4.jpeg"
+                alt="highline-1"
+                class="highline__picture"
+              />
+              <small class="highline__small">Your Opinion</small>
+            </section>
+            <section class="highline highline-container__picture5">
+              <img
+                src="../client/images/profile/profile_3.png"
+                alt="profile-photo"
+                class="highline-profile"
+              />
+              <img
+                src="./images/highline/highline_5.jpeg"
+                alt="highline-1"
+                class="highline__picture"
+              />
+              <small class="highline__small">Your Feeling</small>
+            </section>
+            <section class="highline highline-container__picture6">
+              <img
+                src="../client/images/profile/profile_2.png"
+                alt="profile-photo"
+                class="highline-profile"
+              />
+              <img
+                src="./images/highline/highline_6.jpeg"
+                alt="highline-1"
+                class="highline__picture"
+              />
+              <small class="highline__small">Your Love</small>
+            </section>
+          </div>
+          <!-- POST INPUT -->
+          <div class="post-input">
+            <img
+              src="../client/images/profile/profile_8.png"
+              alt="profile-photo"
+              class="post-input__profile"
+            />
+            <input
+              type="text"
+              id="post-input-text"
+              name="post-input-text"
+              placeholder="What is on your mind. Jinyuan?"
+            />
+            <label class="button post-input-button">Post</label>
+          </div>
+          <div class="card2 posts post1">
+            <section class="post-information">
+              <a href="/" class="profile post-profile-photo">
+                <img
+                  src="../client/images/profile/profile_11.png"
+                  alt="profile-photo"
+                  class="profile"
+                />
+              </a>
+              <div class="post-status">
+                <div class="poster-name">jinyuan Zhang</div>
+                <div class="post-location-time">
+                  <small>Brisbane</small>
+                  <small>15 minutes ago</small>
+                </div>
+              </div>
+            </section>
+            <section class="post-picture">
+              <img
+                src="../client/images/post/post_5.jpeg"
+                alt="profile-photo"
+              />
+            </section>
+          </div>
+          <div class="card2 posts post2">
+            <section class="post-information">
+              <a href="/" class="profile post-profile-photo">
+                <img
+                  src="../client/images/profile/profile_4.png"
+                  alt="profile-photo"
+                  class="profile"
+                />
+              </a>
+              <div class="post-status">
+                <div class="poster-name">Andy Liu</div>
+                <div class="post-location-time">
+                  <small>Adelaide</small>
+                  <small>20 minutes ago</small>
+                </div>
+              </div>
+            </section>
+            <section class="post-picture">
+              <img
+                src="../client/images/post/post_9.jpeg"
+                alt="profile-photo"
+              />
+            </section>
+          </div>
+        </section>
+        <!-- MAIN RIGHT -->
+        <section class="main-right">
+          <div class="card3 message-container">
+            <p class="title">
+              <spam>message</spam>
+              <i class="fa-solid fa-pen-to-square"></i>
+            </p>
+            <div class="search-bar message-search-bar">
+              <i class="fas fa-search"></i>
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder="Search Messages"
+              />
+            </div>
+            <div class="options">
+              <p>Primary</p>
+              <p>General</p>
+              <p>Requests</p>
+            </div>
+            <section class="message-list">
+              <div class="message message-list__1">
+                <a href="/" class="profile post-profile-photo">
+                  <img
+                    src="../client/images/profile/profile_3.png"
+                    alt="profile-photo"
+                    class="profile user-list__profile-photo"
+                  />
+                </a>
+                <div class="message-status">
+                  <div class="poster-name">Tomas Li</div>
+                  <div class="post-message">
+                    <small>Hi, Long time no see</small>
+                  </div>
+                </div>
+              </div>
+              <div class="message message-list__2">
+                <a href="/" class="profile post-profile-photo">
+                  <img
+                    src="../client/images/profile/profile_7.png"
+                    alt="profile-photo"
+                    class="profile user-list__profile-photo"
+                  />
+                </a>
+                <div class="message-status">
+                  <div class="poster-name">Lana Rose</div>
+                  <div class="post-message">
+                    <small>Birthday Tomorrow</small>
+                  </div>
+                </div>
+              </div>
+              <div class="message message-list__3">
+                <a href="/" class="profile post-profile-photo">
+                  <img
+                    src="../client/images/profile/profile_5.png"
+                    alt="profile-photo"
+                    class="profile user-list__profile-photo"
+                  />
+                </a>
+                <div class="message-status">
+                  <div class="poster-name">No One</div>
+                  <div class="post-message">
+                    <small>Lol u right</small>
+                  </div>
+                </div>
+              </div>
+              <div class="message message-list__4">
+                <a href="/" class="profile post-profile-photo">
+                  <img
+                    src="../client/images/profile/profile_13.png"
+                    alt="profile-photo"
+                    class="profile user-list__profile-photo"
+                  />
+                </a>
+                <div class="message-status">
+                  <div class="poster-name">Emily</div>
+                  <div class="post-message">
+                    <small>Emm, sounds good!</small>
+                  </div>
+                </div>
+              </div>
+              <div class="message message-list__5">
+                <a href="/" class="profile post-profile-photo">
+                  <img
+                    src="../client/images/profile/profile_16.png"
+                    alt="profile-photo"
+                    class="profile user-list__profile-photo"
+                  />
+                </a>
+                <div class="message-status">
+                  <div class="poster-name">Alex</div>
+                  <div class="post-message">
+                    <small>Hang on, give me a sec</small>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <section class="request-container">
+            <p class="title">Request</p>
+            <div class="card1 request1">
+              <div class="request">
+                <a href="/" class="profile">
+                  <img
+                    src="../client/images/profile/profile_9.png"
+                    alt="profile-photo"
+                    class="profile user-list__profile-photo"
+                  />
+                </a>
+                <div class="request-status">
+                  <div class="applier-name">Tomas Li</div>
+                  <div class="applying-information">
+                    <small>8 Mutual Friends</small>
+                  </div>
+                </div>
+              </div>
+              <div class="two-buttons">
+                <label class="button button-accept">Accept</label>
+                <label class="button button-cancel">Decline</label>
+              </div>
+            </div>
+            <div class="card1 request1">
+              <div class="request">
+                <a href="/" class="profile">
+                  <img
+                    src="../client/images/profile/profile_17.png"
+                    alt="profile-photo"
+                    class="profile user-list__profile-photo"
+                  />
+                </a>
+                <div class="request-status">
+                  <div class="applier-name">Erica Lyu</div>
+                  <div class="applying-information">
+                    <small>2 Mutual Friends</small>
+                  </div>
+                </div>
+              </div>
+              <div class="two-buttons">
+                <label class="button button-accept">Accept</label>
+                <label class="button button-cancel">Decline</label>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </section>
   </body>
+  <footer><p>&copy; 2023 Jinyuan Zhang. All Rights Reserved.</p></footer>
 </html>

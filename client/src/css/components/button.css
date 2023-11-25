@@ -1,0 +1,49 @@
+.button {
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: clamp(0.7rem, 1rem, 1.5rem);
+}
+
+.post-input-button {
+  width: clamp(50px, 6vw, 80px);
+  height: 70%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.button-create-post {
+  width: 100%;
+  height: clamp(30px, 4vh, 50px);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.button-primary {
+  width: clamp(80px, 9vw, 100px);
+  height: clamp(25px, 3vh, 40px);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.button-accept {
+  width: clamp(50px, 7vw, 150px);
+  height: clamp(25px, 3vh, 40px);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.button-cancel {
+  width: clamp(50px, 7vw, 150px);
+  height: clamp(25px, 3vh, 40px);
+  background-color: var(---color-white);
+  color: var(--color-primary);
+  box-shadow: 0 0 1px var(--color-gray);
+}
+
+.button:hover {
+  opacity: 0.8;
+}

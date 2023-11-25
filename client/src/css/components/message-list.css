@@ -1,0 +1,18 @@
+.message {
+  display: flex;
+  gap: 3%;
+  align-items: center;
+}
+
+.message-status {
+  font-size: 0.8rem;
+}
+
+.message-status .poster-name {
+  font-weight: bold;
+}
+
+.message-status .post-message small {
+  color: var(--color-card-background-color);
+  filter: brightness(0.6);
+}
