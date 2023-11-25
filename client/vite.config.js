@@ -1,4 +1,6 @@
 import { defineConfig } from "vite";
+import path from "path";
+//必须有
 
 export default defineConfig({
   resolve: {
