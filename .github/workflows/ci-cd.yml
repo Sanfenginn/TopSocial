@@ -62,9 +62,9 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /home/ubuntu/topsocial
+            cd /home/ubuntu/TopSocial
             git fetch --all
             git reset --hard origin/main
             git clean -df
-            sudo chmod -R 755 /home/ubuntu/topsocial
+            sudo chmod -R 755 /home/ubuntu/TopSocial
             sudo systemctl reload apache2
