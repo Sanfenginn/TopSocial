@@ -1,0 +1,55 @@
+@import "normalize.css";
+
+/* import UNIVERSAL STYLES */
+@import "./src/foundation/common.css";
+
+/* import FRAMES */
+@import "./src/css/frames/header/header.css";
+@import "./src/css/frames/main/main.css";
+@import "./src/css/frames/main/post.css";
+@import "./src/css/frames/main/main-left.css";
+@import "./src/css/frames/main/main-middle.css";
+@import "./src/css/frames/main/main-right.css";
+@import "./src/css/frames/main/post-input.css";
+
+/* import COMPONENTS */
+@import "./src/css/components/button.css";
+@import "./src/css/components/profile.css";
+@import "./src/css/components/search.css";
+@import "./src/css/components/cards.css";
+@import "./src/css/components/post.css";
+@import "./src/css/components/highline.css";
+@import "./src/css/components/message-list.css";
+@import "./src/css/components/request.css";
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: ;
+}
+
+@media only screen and (width <= 480px) {
+  .posts {
+    height: 40vh;
+  }
+}
+
+@media only screen and (width <= 1024px) {
+  .main {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .main-middle {
+    grid-column: 1/2;
+  }
+
+  .main-left {
+    display: none;
+  }
+
+  .main-right {
+    display: none;
+  }
+}

@@ -1,0 +1,30 @@
+.highline {
+  position: relative;
+  width: 15.9%;
+  height: 100%;
+}
+
+.highline-profile {
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.highline__picture {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.highline__small {
+  position: absolute;
+  font-size: 0.8rem;
+  bottom: 10%;
+  transform: translateX(-100%);
+  width: 100%;
+  text-align: center;
+  color: var(--color-white);
+  filter: brightness(90%);
+  font-family: var(--font-family-lato);
+}

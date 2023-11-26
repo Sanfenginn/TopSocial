@@ -1,0 +1,70 @@
+.message-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+}
+
+.message-container .title {
+  margin: 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-container .options {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: var(--color-white) 0.7vh solid;
+}
+
+.message-container .options p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 2%;
+}
+
+.message-container .options p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.7vh;
+  width: 100%;
+  height: 0.7vh;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.message-container .options p:hover::after {
+  background-color: var(--color-black);
+}
+
+.message-list {
+  padding: 0 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5vh;
+}
+
+.request-container p {
+  margin-left: 3%;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.request-container .request1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  margin-bottom: 6%;
+}
+
+.two-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}

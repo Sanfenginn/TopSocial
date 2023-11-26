@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Actor&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --color-white: #f5f5f3;
+  --color-black: #1c2033;
+  --color-gray: #8f8f93;
+  --color-primary: #08979c;
+  --color-card-background-color: #fff;
+  --color-main-text: #354f52;
+  --color-heading: #52796f;
+  --color-hover: #2f3e46;
+  --font-family-actor: "Actor", sans-serif;
+  --font-family-lato: "Lato", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-family: var(--font-family-actor);
+  background-color: var(--color-white);
+  color: var(--color-main-text);
+}
+
+footer {
+  text-align: center;
+}

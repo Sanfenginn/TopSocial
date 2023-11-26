@@ -1,0 +1,19 @@
+.request {
+  display: flex;
+  gap: 3%;
+  align-items: center;
+  padding-left: 2vh;
+}
+
+.request-status {
+}
+
+.request-status .applier-name {
+  font-weight: bold;
+}
+
+.request-status .applying-information {
+  color: var(--color-card-background-color);
+  filter: brightness(0.6);
+  font-size: 0.8rem;
+}

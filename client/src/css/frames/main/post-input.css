@@ -1,0 +1,38 @@
+.post-input {
+  background-color: var(--color-card-background-color);
+  text-align: center;
+  width: 100%;
+  height: clamp(20px, 3.5vh, 50px);
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5%;
+  align-items: center;
+  padding-left: 1.5%;
+  position: relative;
+}
+
+.post-input input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 100%;
+  border-radius: 20px;
+  color: var(--color-main-text);
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.post-input input[type="text"]::placeholder {
+  font-size: 0.75rem;
+  color: var(--color-main-text);
+  font-style: italic;
+  font-family: var(--font-family-lato);
+}
+
+.post-input label {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translateY(-50%);
+}
