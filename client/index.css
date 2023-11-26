@@ -1,16 +1,15 @@
 @import "normalize.css";
 
 /* import UNIVERSAL STYLES */
-@import "./src/foundation/common.css";
+@import "./src/css/foundation/common.css";
 
 /* import FRAMES */
 @import "./src/css/frames/header/header.css";
 @import "./src/css/frames/main/main.css";
-@import "./src/css/frames/main/post.css";
-@import "./src/css/frames/main/main-left.css";
-@import "./src/css/frames/main/main-middle.css";
-@import "./src/css/frames/main/main-right.css";
-@import "./src/css/frames/main/post-input.css";
+@import "./src/css/frames/main/main-left/main-left.css";
+@import "./src/css/frames/main/main-middle/main-middle.css";
+@import "./src/css/frames/main/main-right/main-right.css";
+@import "./src/css/frames/main/main-middle/main-middle-post-input.css";
 
 /* import COMPONENTS */
 @import "./src/css/components/button.css";
@@ -26,7 +25,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  grid-template-areas: ;
 }
 
 @media only screen and (width <= 480px) {

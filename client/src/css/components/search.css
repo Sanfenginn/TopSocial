@@ -5,20 +5,34 @@
   justify-content: flex-start;
   align-items: center;
   background-color: var(--color-white);
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
-.header-search-bar {
+.search-bar:hover {
+  border: var(--color-main-text) 1px solid;
+}
+
+.header__search-bar {
   gap: 1.5%;
   padding-left: 1.5%;
   width: clamp(30%, 40vw, 50%);
   height: clamp(20px, 3.5vh, 50px);
 }
 
-.message-search-bar {
+.message__search-bar {
   gap: 2.5%;
   padding-left: 5%;
   width: 100%;
-  height: clamp(20px, 3.5vh, 50px);
+  height: clamp(20px, 4vh, 50px);
+}
+
+.post-input__search-bar {
+  gap: 1.5%;
+  padding-left: 1.5%;
+  width: 100%;
+  height: clamp(20px, 4vh, 50px);
+  background-color: var(--color-card-background-color);
 }
 
 .search-bar i {
