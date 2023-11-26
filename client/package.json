@@ -15,5 +15,10 @@
     "axios": "^1.6.2",
     "normalize.css": "^8.0.1",
     "path-browserify": "^1.0.1"
-  }
+  },
+  "description": "This is the frontend part of the TopSocial project, built using the Vite framework and Vanilla CSS.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
