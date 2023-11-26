@@ -2,6 +2,15 @@
   display: flex;
   gap: 3%;
   align-items: center;
+  padding: 3%;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease-in;
+  border-radius: 10px;
+}
+
+.message:hover {
+  cursor: pointer;
+  border: var(--color-main-text) 1px solid;
 }
 
 .message-status {

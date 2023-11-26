@@ -2,13 +2,12 @@
   background-color: var(--color-card-background-color);
   text-align: center;
   width: 100%;
-  height: clamp(20px, 3.5vh, 50px);
+  height: clamp(20px, 4vh, 50px);
   border-radius: 20px;
   display: flex;
   justify-content: flex-start;
   gap: 1.5%;
   align-items: center;
-  padding-left: 1.5%;
   position: relative;
 }
 

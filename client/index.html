@@ -25,9 +25,9 @@
       <!-- HEADER, INCLUDE BRAND NAME, SEARCH BAR AND CREATE BUTTON, PROFILE BUTTON -->
       <header class="header-container">
         <!--  LOGO, BRAND NAME -->
-        <div class="logo">TOPSOCIAL</div>
+        <a href="/" class="logo">TOPSOCIAL</a>
         <!-- SEARCH BAR -->
-        <div class="search-bar header-search-bar">
+        <div class="search-bar header__search-bar">
           <i class="fas fa-search"></i>
           <input
             type="search"
@@ -44,19 +44,19 @@
           <img
             src="images/profile/profile_8.png"
             alt="profile-photo"
-            class="profile"
+            class="profile header-profile"
           />
         </div>
       </header>
       <main class="main">
         <!-- MAIN LEFT -->
         <section class="main-left">
-          <div class="card1 main-left__profile">
+          <div class="card main-left-card main-left__profile">
             <a href="/">
               <img
                 src=" images/profile/profile_8.png"
                 alt="profile-photo"
-                class="profile main-left__profile-photo"
+                class="profile main-left__profile"
               />
             </a>
             <div class="main-left__information">
@@ -64,7 +64,7 @@
               <small class="username">@jinyuan1992</small>
             </div>
           </div>
-          <div class="card1 navbar">
+          <div class="card main-left-card navbar">
             <a><i class="fas fa-home"></i>Home</a>
             <a><i class="fas fa-compass"></i>Explore</a>
             <a><i class="fas fa-bell"></i>Notifications</a>
@@ -74,7 +74,7 @@
             <a><i class="fas fa-book-reader"></i>Theme</a>
             <a><i class="fa-solid fa-gear"></i>Setting</a>
           </div>
-          <label for="create-post" class="button button-create-post"
+          <label for="post-input-text" class="button button-create-post"
             >Create Post</label
           >
         </section>
@@ -86,7 +86,7 @@
               <img
                 src=" images/profile/profile_8.png"
                 alt="profile-photo"
-                class="highline-profile"
+                class="profile highline__profile"
               />
               <img
                 src="./images/highline/highline_1.jpeg"
@@ -99,7 +99,7 @@
               <img
                 src=" images/profile/profile_6.png"
                 alt="profile-photo"
-                class="highline-profile"
+                class="profile highline__profile"
               />
               <img
                 src="./images/highline/highline_2.jpeg"
@@ -112,7 +112,7 @@
               <img
                 src=" images/profile/profile_5.png"
                 alt="profile-photo"
-                class="highline-profile"
+                class="profile highline__profile"
               />
               <img
                 src="./images/highline/highline_3.jpeg"
@@ -125,7 +125,7 @@
               <img
                 src=" images/profile/profile_4.png"
                 alt="profile-photo"
-                class="highline-profile"
+                class="profile highline__profile"
               />
               <img
                 src="./images/highline/highline_4.jpeg"
@@ -138,7 +138,7 @@
               <img
                 src=" images/profile/profile_3.png"
                 alt="profile-photo"
-                class="highline-profile"
+                class="profile highline__profile"
               />
               <img
                 src="./images/highline/highline_5.jpeg"
@@ -151,7 +151,7 @@
               <img
                 src=" images/profile/profile_2.png"
                 alt="profile-photo"
-                class="highline-profile"
+                class="profile highline__profile"
               />
               <img
                 src="./images/highline/highline_6.jpeg"
@@ -163,30 +163,32 @@
           </div>
           <!-- POST INPUT -->
           <div class="post-input">
-            <img
-              src="images/profile/profile_8.png"
-              alt="profile-photo"
-              class="post-input__profile"
-            />
-            <input
-              type="text"
-              id="post-input-text"
-              name="post-input-text"
-              placeholder="What is on your mind. Jinyuan?"
-            />
+            <section class="search-bar post-input__search-bar">
+              <img
+                src="images/profile/profile_8.png"
+                alt="profile-photo"
+                class="profile post-input__profile"
+              />
+              <input
+                type="text"
+                id="post-input-text"
+                name="post-input-text"
+                placeholder="What is on your mind, Jinyuan?"
+              />
+            </section>
             <label class="button post-input-button">Post</label>
           </div>
-          <div class="card2 posts post1">
+          <div class="card posts-card posts post1">
             <section class="post-information">
               <a href="/" class="profile post-profile-photo">
                 <img
                   src=" images/profile/profile_11.png"
                   alt="profile-photo"
-                  class="profile"
+                  class="profile post-profile"
                 />
               </a>
               <div class="post-status">
-                <div class="poster-name">jinyuan Zhang</div>
+                <div class="poster-name">Jinyuan Zhang</div>
                 <div class="post-location-time">
                   <small>Brisbane</small>
                   <small>15 minutes ago</small>
@@ -197,13 +199,13 @@
               <img src=" images/post/post_5.jpeg" alt="profile-photo" />
             </section>
           </div>
-          <div class="card2 posts post2">
+          <div class="card posts-card posts post2">
             <section class="post-information">
               <a href="/" class="profile post-profile-photo">
                 <img
                   src=" images/profile/profile_4.png"
                   alt="profile-photo"
-                  class="profile"
+                  class="profile post-profile"
                 />
               </a>
               <div class="post-status">
@@ -221,12 +223,12 @@
         </section>
         <!-- MAIN RIGHT -->
         <section class="main-right">
-          <div class="card3 message-container">
+          <div class="card message-card message-container">
             <p class="title">
               <spam>message</spam>
               <i class="fa-solid fa-pen-to-square"></i>
             </p>
-            <div class="search-bar message-search-bar">
+            <div class="search-bar message__search-bar">
               <i class="fas fa-search"></i>
               <input
                 type="search"
@@ -246,7 +248,7 @@
                   <img
                     src="images/profile/profile_3.png"
                     alt="profile-photo"
-                    class="profile user-list__profile-photo"
+                    class="profile user-list__profile"
                   />
                 </a>
                 <div class="message-status">
@@ -261,7 +263,7 @@
                   <img
                     src="images/profile/profile_7.png"
                     alt="profile-photo"
-                    class="profile user-list__profile-photo"
+                    class="profile user-list__profile"
                   />
                 </a>
                 <div class="message-status">
@@ -276,7 +278,7 @@
                   <img
                     src="images/profile/profile_5.png"
                     alt="profile-photo"
-                    class="profile user-list__profile-photo"
+                    class="profile user-list__profile"
                   />
                 </a>
                 <div class="message-status">
@@ -291,7 +293,7 @@
                   <img
                     src="images/profile/profile_13.png"
                     alt="profile-photo"
-                    class="profile user-list__profile-photo"
+                    class="profile user-list__profile"
                   />
                 </a>
                 <div class="message-status">
@@ -306,7 +308,7 @@
                   <img
                     src="images/profile/profile_16.png"
                     alt="profile-photo"
-                    class="profile user-list__profile-photo"
+                    class="profile user-list__profile"
                   />
                 </a>
                 <div class="message-status">
@@ -320,13 +322,13 @@
           </div>
           <section class="request-container">
             <p class="title">Request</p>
-            <div class="card1 request1">
+            <div class="card main-left-card request1">
               <div class="request">
                 <a href="/" class="profile">
                   <img
                     src="images/profile/profile_9.png"
                     alt="profile-photo"
-                    class="profile user-list__profile-photo"
+                    class="profile user-list__profile"
                   />
                 </a>
                 <div class="request-status">
@@ -341,13 +343,13 @@
                 <label class="button button-cancel">Decline</label>
               </div>
             </div>
-            <div class="card1 request1">
+            <div class="card main-left-card request1">
               <div class="request">
                 <a href="/" class="profile">
                   <img
                     src="images/profile/profile_17.png"
                     alt="profile-photo"
-                    class="profile user-list__profile-photo"
+                    class="profile user-list__profile"
                   />
                 </a>
                 <div class="request-status">

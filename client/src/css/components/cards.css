@@ -1,16 +1,28 @@
-.card1 {
+.card {
   padding: 5%;
   background-color: var(--color-card-background-color);
   border-radius: 10px;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
-.card2 {
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main-left-card {
+  padding: 5%;
+  background-color: var(--color-card-background-color);
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.posts-card {
   padding: 1.5%;
   background-color: var(--color-card-background-color);
   border-radius: 10px;
 }
 
-.card3 {
+.message-card {
   padding: 3% 3% 10% 3%;
   background-color: var(--color-card-background-color);
   border-radius: 10px;
