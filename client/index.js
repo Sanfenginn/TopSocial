@@ -1,7 +1,13 @@
-import { highline, request } from "@/js/database.js";
+import {
+  highline,
+  request,
+  message,
+  profile,
+  postCards,
+} from "@/js/database.js";
 //导入highLine变量
 
-// set all the highline pictures from database
+// SET ALL THE HIGHLINE PICTURES, DESCRIPTION, AND PROFILE PHOTOS FROM DATABASE
 const middle = document.querySelector(".main-middle");
 const middleHighlineContainer = middle.querySelector(".highline-container");
 const middleHighline = middleHighlineContainer.querySelectorAll(".highline");
@@ -32,39 +38,150 @@ middleHighlineSmall.forEach((element, index) => {
   element.textContent = highline.description[index];
 });
 
-// set all the request profile photo, name, and mutual friend number from database
+//SET A PROJECT TO GET ALL THE ATTRIBUTE THAT WE NEED FROM ARRAY THAT WE GOT FROM DATABASE
+const getAllAttributes = (array, attribute1, attribute2, attribute3) => {
+  const allAttributes = array.map((item) => {
+    return {
+      [attribute1]: item[attribute1],
+      [attribute2]: item[attribute2],
+      [attribute3]: item[attribute3],
+    };
+  });
+  return allAttributes;
+};
+
+// SET ALL THE REQUEST PROFILE PHOTO, NAME, AND MUTUAL FRIEND NUMBER FROM DATABASE
 const requestContainer = document.querySelector(".request-container");
 const applierName = requestContainer.querySelectorAll(".applier-name");
 const requestProfile = requestContainer.querySelectorAll(".request__profile");
 const mutualFriend = requestContainer.querySelectorAll("small");
 
-//get a project include name, mutual friend number and profile photo src.
-const allAttributes = request.map((item) => {
-  return {
-    name: item.name,
-    mutualFriendNum: item.mutualFriendNum,
-    src: item.src,
-  };
-});
-
 //set the name of applier
+const requestAllAttributes = getAllAttributes(
+  request,
+  "name",
+  "mutualFriendNum",
+  "src"
+);
+
 applierName.forEach((element, index) => {
-  element.textContent = allAttributes[index].name;
+  element.textContent = requestAllAttributes[index].name;
 });
 
 // set the mutual friend number
 mutualFriend.forEach((element, index) => {
   if (
-    allAttributes[index].mutualFriendNum === 0 ||
-    allAttributes[index].mutualFriendNum === 1
+    requestAllAttributes[index].mutualFriendNum === 0 ||
+    requestAllAttributes[index].mutualFriendNum === 1
   ) {
-    element.textContent = ` ${allAttributes[index].mutualFriendNum} Mutual Friend`;
+    element.textContent = ` ${requestAllAttributes[index].mutualFriendNum} Mutual Friend`;
   } else {
-    element.textContent = ` ${allAttributes[index].mutualFriendNum} Mutual Friends`;
+    element.textContent = ` ${requestAllAttributes[index].mutualFriendNum} Mutual Friends`;
   }
 });
 
 // set the profile photo
 requestProfile.forEach((element, index) => {
-  element.src = allAttributes[index].src;
+  element.src = requestAllAttributes[index].src.replace("./src", "./public");
+});
+
+//SET ALL THE PROFILE PHOTOS, MESSAGES, AND NAMES FOR MESSAGE SECTION
+const messageList = document.querySelector(".message-list");
+const userListProfile = messageList.querySelectorAll(".user-list__profile");
+const friendsName = messageList.querySelectorAll(".friends-name");
+const friendsMessage = messageList.querySelectorAll("small");
+
+//set a project to get all src path, name,message from message array that wo got from database
+const messageAllAttributes = getAllAttributes(message, "src", "name", "msg");
+//get the src of profile photo
+userListProfile.forEach((element, index) => {
+  element.src = messageAllAttributes[index].src.replace("/src", "./public");
+});
+// get friends'name
+friendsName.forEach((element, index) => {
+  element.textContent = messageAllAttributes[index].name;
+});
+// get the msg for every friend
+friendsMessage.forEach((element, index) => {
+  element.textContent = messageAllAttributes[index].msg;
+});
+
+//SET THE PROFILE PHOTO OF CURRENT USER
+const currentUserProfile = document.querySelectorAll(".current-user-profile");
+const currentUserProfileUsername = document.querySelector(".username");
+const currentUserProfileAccount = document.querySelector(".account");
+
+currentUserProfile.forEach((element) => {
+  element.src = profile.img_src.replace("./src", "./public");
+});
+
+currentUserProfileUsername.textContent = profile.name;
+currentUserProfileAccount.textContent = profile.at;
+
+//SET THE POST CARDS FOR POST SECTION
+console.log(postCards);
+
+const mainMiddle = document.querySelector(".main-middle");
+
+postCards.forEach((element, index) => {
+  const template = document.getElementById("template");
+  const newPostCard = template.cloneNode(true);
+
+  // set the profile photo
+  const profileImg = newPostCard.querySelector(".post-information img");
+  profileImg.src = postCards[index].profile.src.replace("./src", "./public");
+
+  //set the poster name
+  const posterName = newPostCard.querySelector(
+    ".post-information .post-status .poster-name"
+  );
+  posterName.textContent = postCards[index].profile.name;
+
+  //set the post location and time
+  const postLocationTime = newPostCard.querySelector(
+    ".post-information .post-status .post-location-time small"
+  );
+  postLocationTime.textContent = `${postCards[index].profile.position}, ${postCards[index].profile.time} minutes ago `;
+
+  //set the post picture
+  const postPicture = newPostCard.querySelector(".post-picture img");
+  postPicture.src = postCards[index].picture.img_src.replace(
+    "./src",
+    "./public"
+  );
+
+  //SET THE POST COMMENTS
+  //set the who like profile
+  const whoLikeProfile = newPostCard.querySelectorAll(
+    ".who-like .who-like__profile img"
+  );
+  whoLikeProfile.forEach((element, index) => {
+    element.src = postCards[index].comment.img_src_list[index].replace(
+      "./src",
+      "./public"
+    );
+  });
+
+  //set who-like description
+  const whoLikeDescription = newPostCard.querySelector(
+    ".who-like .who-like__description"
+  );
+  const first_people_name = postCards[index].comment.first_people_name;
+  const like_peoples_number = postCards[index].comment.like_peoples_number;
+  whoLikeDescription.textContent = `Liked by ${first_people_name} and ${like_peoples_number} others`;
+
+  //set the comment info
+  const commentInfo = newPostCard.querySelector(".comment-info");
+  commentInfo.textContent = postCards[index].comment.comment_info;
+
+  // set the other views option
+  const otherViews = newPostCard.querySelector(".other-views");
+  const viewNumber = postCards[index].comment.view_number;
+  otherViews.textContent = `View all ${viewNumber} comments`;
+
+  newPostCard.id = "";
+
+  newPostCard.style.display = "flex";
+  newPostCard.classList.add("posts");
+  mainMiddle.appendChild(newPostCard);
 });

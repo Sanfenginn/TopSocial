@@ -5,6 +5,7 @@
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
+  border: 2px solid var(--color-primary);
 }
 
 .highline__profile {
@@ -15,4 +16,9 @@
 .post-input__profile {
   width: clamp(17px, 3vh, 35px);
   height: clamp(17px, 3vh, 35px);
+}
+
+.comment-profile {
+  width: clamp(10px, 1.5vh, 35px);
+  height: clamp(10px, 1.5vh, 35px);
 }

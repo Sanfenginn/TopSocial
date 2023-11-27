@@ -17,7 +17,7 @@
 
 .button-create-post {
   width: 100%;
-  height: clamp(30px, 4vh, 50px);
+  height: clamp(25px, 3vh, 40px);
   background-color: var(--color-primary);
   color: var(--color-white);
 }

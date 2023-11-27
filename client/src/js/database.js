@@ -5,7 +5,7 @@ import { getPath } from "./utils.js";
 const getHighline = async () => {
   const path = getPath("highline");
   const response = await getInfo(path);
-  console.log(response);
+  // console.log(response);
   return response.data;
 };
 
@@ -27,10 +27,37 @@ export const highline = await getHighline();
 // 5. 通过 export 导出 highLine 变量
 // 6. 供其他文件使用
 
+// get the request array from database
 const getRequest = async () => {
   const path = getPath("request");
   const response = await getInfo(path);
-  console.log(response);
+  // console.log(response);
   return response.data;
 };
 export const request = await getRequest();
+
+// get message section array from database
+const getMessage = async () => {
+  const path = getPath("message");
+  const response = await getInfo(path);
+  // console.log(response);
+  return response.data;
+};
+export const message = await getMessage();
+
+// get current user array from database
+const getCurrentUserProfile = async () => {
+  const path = getPath("profile");
+  const response = await getInfo(path);
+  // console.log("response.data: ", response.data);
+  return response.data;
+};
+export const profile = await getCurrentUserProfile();
+
+// get post card information array from database
+const getPostCards = async () => {
+  const path = getPath("cards");
+  const response = await getInfo(path);
+  return response.data;
+};
+export const postCards = await getPostCards();

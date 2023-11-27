@@ -1,14 +1,33 @@
 .main-middle {
   grid-column: 2/3;
-  padding: 1.5%;
+  padding: 2vh;
   display: flex;
   flex-direction: column;
-  gap: 1vh;
+  justify-content: flex-start;
+  gap: 2vh;
 }
 
 .highline-container {
   display: flex;
-  padding: 0;
   justify-content: space-between;
-  gap: 0.92%;
+}
+
+.action-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2%;
+  padding: 0 2%;
+  font-size: 1.2rem;
+}
+
+.action-icon:hover {
+  cursor: pointer;
+}
+
+.action-icon__left {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }

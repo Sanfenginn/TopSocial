@@ -1,12 +1,12 @@
 .main-left {
   grid-column: 1/2;
-  padding: 3%;
+  padding: 2vh;
   display: flex;
   flex-direction: column;
-  gap: 2%;
+  gap: 3%;
   position: sticky;
-  top: 7%;
-  height: 80vh;
+  top: 4.9%;
+  height: 88vh;
 }
 
 .main-left__profile {
@@ -27,12 +27,15 @@
   font-weight: bold;
 }
 
+.main-left__information .account {
+  color: var(--color-card-background-color);
+  filter: brightness(0.6);
+}
+
 .main-left .navbar {
   display: flex;
   flex-direction: column;
   padding-left: 5%;
-  position: relative;
-  width: 100%;
 }
 
 .main-left .navbar a:hover {
@@ -43,7 +46,7 @@
 }
 
 .navbar a {
-  padding: 5%;
+  padding: 4.5%;
 }
 
 .navbar a i {
