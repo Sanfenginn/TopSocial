@@ -2,7 +2,7 @@
   "profile": {
     "name": "Jinyuan Zhang",
     "at": "@Jinyuanzhang1992",
-    "img_src": "./src/images/profile/profile_1.png"
+    "img_src": "./src/images/profile/profile_18.jpg"
   },
   "highline": {
     "description": [
@@ -18,7 +18,7 @@
     {
       "id": 1,
       "profile": {
-        "src": "./src/images/profile/profile_1.png",
+        "src": "./src/images/profile/profile_18.jpg",
         "name": "Jinyuan Zhang",
         "position": "Darwin",
         "time": 15
