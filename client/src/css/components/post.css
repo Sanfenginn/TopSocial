@@ -1,8 +1,8 @@
 .posts {
   display: flex;
   flex-direction: column;
-  gap: 2%;
-  height: 60vh;
+  gap: 0.5vh;
+  justify-content: space-evenly;
 }
 
 .post-information {
@@ -19,17 +19,19 @@
 .post-status .poster-name {
   font-weight: bold;
 }
+
 .post-status .post-location-time {
   font-size: 0.8rem;
+  color: var(--color-card-background-color);
+  filter: brightness(0.6);
 }
 
 .post-picture {
-  height: 85%;
+  display: flex;
 }
 
 .post-picture img {
   border-radius: 10px;
-  aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
   width: 100%;

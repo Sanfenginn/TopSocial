@@ -1,7 +1,7 @@
 {
   "profile": {
-    "name": "Elden Lord",
-    "at": "@EldenRing",
+    "name": "Jinyuan Zhang",
+    "at": "@Jinyuanzhang1992",
     "img_src": "./src/images/profile/profile_1.png"
   },
   "highline": {
@@ -18,10 +18,10 @@
     {
       "id": 1,
       "profile": {
-        "src": "./src/images/profile/profile_2.png",
-        "name": "Lana Rose",
-        "position": "Somewhere",
-        "time": "15 MINUTES AGO"
+        "src": "./src/images/profile/profile_1.png",
+        "name": "Jinyuan Zhang",
+        "position": "Darwin",
+        "time": 15
       },
       "picture": {
         "img_src": "./src/images/post/post_5.jpeg"
@@ -33,9 +33,9 @@
           "./src/images/profile/profile_7.png"
         ],
         "first_people_name": "Ernest Achiever",
-        "like_peoples_number": 2323,
-        "comment_info": "Lana Rose Lorem ipsum dolor sit quisquam eius. #lifestyle",
-        "view_number": 3473
+        "like_peoples_number": 462,
+        "comment_info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia expedita repellendus harum beatae? #Trip",
+        "view_number": 3456
       }
     },
     {
@@ -43,8 +43,8 @@
       "profile": {
         "src": "./src/images/profile/profile_3.png",
         "name": "Lana Rose",
-        "position": "Somewhere",
-        "time": "15 MINUTES AGO"
+        "position": "Brisbane",
+        "time": 29
       },
       "picture": {
         "img_src": "./src/images/post/post_6.jpeg"
@@ -55,10 +55,10 @@
           "./src/images/profile/profile_6.png",
           "./src/images/profile/profile_7.png"
         ],
-        "first_people_name": "Ernest Achiever",
-        "like_peoples_number": 2323,
-        "comment_info": "Lana Rose Lorem ipsum dolor sit quisquam eius. #lifestyle",
-        "view_number": 3473
+        "first_people_name": "John Doe",
+        "like_peoples_number": 7473,
+        "comment_info": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure. #Fitness",
+        "view_number": 19332
       }
     },
     {
@@ -66,8 +66,8 @@
       "profile": {
         "src": "./src/images/profile/profile_4.png",
         "name": "Lana Rose",
-        "position": "Somewhere",
-        "time": "15 MINUTES AGO"
+        "position": "Perth",
+        "time": 40
       },
       "picture": {
         "img_src": "./src/images/post/post_7.jpeg"
@@ -78,10 +78,10 @@
           "./src/images/profile/profile_6.png",
           "./src/images/profile/profile_7.png"
         ],
-        "first_people_name": "Ernest Achiever",
+        "first_people_name": "Andy Rose",
         "like_peoples_number": 2323,
-        "comment_info": "Lana Rose Lorem ipsum dolor sit quisquam eius. #lifestyle",
-        "view_number": 3473
+        "comment_info": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, deleniti. #Studying",
+        "view_number": 322
       }
     },
     {
@@ -89,8 +89,8 @@
       "profile": {
         "src": "./src/images/profile/profile_5.png",
         "name": "Lana Rose",
-        "position": "Somewhere",
-        "time": "15 MINUTES AGO"
+        "position": "Sydney",
+        "time": 55
       },
       "picture": {
         "img_src": "./src/images/post/post_8.jpeg"
@@ -101,10 +101,10 @@
           "./src/images/profile/profile_6.png",
           "./src/images/profile/profile_7.png"
         ],
-        "first_people_name": "Ernest Achiever",
-        "like_peoples_number": 2323,
-        "comment_info": "Lana Rose Lorem ipsum dolor sit quisquam eius. #lifestyle",
-        "view_number": 3473
+        "first_people_name": "Andrew Smith",
+        "like_peoples_number": 2122,
+        "comment_info": "Lorem ipsum dolor sit amet consectetur adipisicing elit.  #Happy",
+        "view_number": 558
       }
     }
   ],

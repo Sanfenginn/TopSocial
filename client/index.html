@@ -7,18 +7,15 @@
     <meta name="description" content="This is a TopSocial website" />
     <meta name="keyword" content="html css javascript vite node.js express" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      href="/client/images/icon-browser-tab.png"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="images/icon-browser-tab.png" type="image/x-icon" />
     <link rel="stylesheet" href="index.css" />
     <script type="module" src="index.js" defer></script>
+    <!-- IMPORT FONT AWESOME -->
     <script
       src="https://kit.fontawesome.com/997ebdf795.js"
       crossorigin="anonymous"
     ></script>
-    <meta name="theme-color" content="#cad2c5" />
+    <meta name="theme-color" content="#f5f5f3" />
   </head>
   <body>
     <section class="container">
@@ -42,9 +39,9 @@
             >Create</label
           >
           <img
-            src="images/profile/profile_8.png"
+            src=""
             alt="profile-photo"
-            class="profile header-profile"
+            class="profile current-user-profile"
           />
         </div>
       </header>
@@ -54,14 +51,14 @@
           <div class="card main-left-card main-left__profile">
             <a href="/">
               <img
-                src=" images/profile/profile_8.png"
+                src=""
                 alt="profile-photo"
-                class="profile main-left__profile"
+                class="profile current-user-profile"
               />
             </a>
             <div class="main-left__information">
-              <div class="name">Jinyuan Zhang</div>
-              <small class="username">@jinyuan1992</small>
+              <div class="username"></div>
+              <small class="account"></small>
             </div>
           </div>
           <div class="card main-left-card navbar">
@@ -84,90 +81,66 @@
           <div class="highline-container">
             <section class="highline highline-container__picture1">
               <img
-                src=" images/profile/profile_8.png"
+                src=""
                 alt="profile-photo"
                 class="profile highline__profile"
               />
-              <img
-                src="./images/highline/highline_1.jpeg"
-                alt="highline-1"
-                class="highline__picture"
-              />
-              <small class="highline__small">Your Stories</small>
+              <img src="" alt="highline-1" class="highline__picture" />
+              <small class="highline__small"></small>
             </section>
             <section class="highline highline-container__picture2">
               <img
-                src=" images/profile/profile_6.png"
+                src=""
                 alt="profile-photo"
                 class="profile highline__profile"
               />
-              <img
-                src="./images/highline/highline_2.jpeg"
-                alt="highline-2"
-                class="highline__picture"
-              />
-              <small class="highline__small">Your view</small>
+              <img src="" alt="highline-2" class="highline__picture" />
+              <small class="highline__small"></small>
             </section>
             <section class="highline highline-container__picture3">
               <img
-                src=" images/profile/profile_5.png"
+                src=""
                 alt="profile-photo"
                 class="profile highline__profile"
               />
-              <img
-                src="./images/highline/highline_3.jpeg"
-                alt="highline-1"
-                class="highline__picture"
-              />
-              <small class="highline__small">Your Emotion</small>
+              <img src="" alt="highline-1" class="highline__picture" />
+              <small class="highline__small"></small>
             </section>
             <section class="highline highline-container__picture4">
               <img
-                src=" images/profile/profile_4.png"
+                src=""
                 alt="profile-photo"
                 class="profile highline__profile"
               />
-              <img
-                src="./images/highline/highline_4.jpeg"
-                alt="highline-1"
-                class="highline__picture"
-              />
-              <small class="highline__small">Your Opinion</small>
+              <img src="" alt="highline-1" class="highline__picture" />
+              <small class="highline__small"></small>
             </section>
             <section class="highline highline-container__picture5">
               <img
-                src=" images/profile/profile_3.png"
+                src=""
                 alt="profile-photo"
                 class="profile highline__profile"
               />
-              <img
-                src="./images/highline/highline_5.jpeg"
-                alt="highline-1"
-                class="highline__picture"
-              />
-              <small class="highline__small">Your Feeling</small>
+              <img src="" alt="highline-1" class="highline__picture" />
+              <small class="highline__small"></small>
             </section>
             <section class="highline highline-container__picture6">
               <img
-                src=" images/profile/profile_2.png"
+                src=""
                 alt="profile-photo"
                 class="profile highline__profile"
               />
-              <img
-                src="./images/highline/highline_6.jpeg"
-                alt="highline-1"
-                class="highline__picture"
-              />
-              <small class="highline__small">Your Love</small>
+              <img src="" alt="highline-1" class="highline__picture" />
+              <small class="highline__small"></small>
             </section>
           </div>
           <!-- POST INPUT -->
           <div class="post-input">
             <section class="search-bar post-input__search-bar">
               <img
-                src="images/profile/profile_8.png"
+                src=""
                 alt="profile-photo"
-                class="profile post-input__profile"
+                class="profile current-user-profile post-input__profile"
               />
               <input
                 type="text"
@@ -178,56 +151,70 @@
             </section>
             <label class="button post-input-button">Post</label>
           </div>
-          <div class="card posts-card posts post1">
+          <!--POST CARDS TEMPLATE-->
+          <div
+            id="template"
+            class="card posts-card posts"
+            style="display: none"
+          >
             <section class="post-information">
-              <a href="/" class="profile post-profile-photo">
-                <img
-                  src=" images/profile/profile_11.png"
-                  alt="profile-photo"
-                  class="profile post-profile"
-                />
+              <a href="/">
+                <img src="" alt="profile-photo" class="profile post-profile" />
               </a>
               <div class="post-status">
-                <div class="poster-name">Jinyuan Zhang</div>
+                <div class="poster-name"></div>
                 <div class="post-location-time">
-                  <small>Brisbane</small>
-                  <small>15 minutes ago</small>
+                  <small></small>
                 </div>
               </div>
             </section>
             <section class="post-picture">
-              <img src=" images/post/post_5.jpeg" alt="profile-photo" />
+              <img src="" alt="profile-photo" />
             </section>
-          </div>
-          <div class="card posts-card posts post2">
-            <section class="post-information">
-              <a href="/" class="profile post-profile-photo">
-                <img
-                  src=" images/profile/profile_4.png"
-                  alt="profile-photo"
-                  class="profile post-profile"
-                />
-              </a>
-              <div class="post-status">
-                <div class="poster-name">Andy Liu</div>
-                <div class="post-location-time">
-                  <small>Adelaide</small>
-                  <small>20 minutes ago</small>
-                </div>
+            <section class="action-icon">
+              <div class="action-icon__left">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-comment-dots"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+              </div>
+              <div class="action-icon__right">
+                <i class="fa-regular fa-bookmark"></i>
               </div>
             </section>
-            <section class="post-picture">
-              <img src="images/post/post_9.jpeg" alt="profile-photo" />
+            <section class="comment">
+              <div class="who-like">
+                <div class="who-like__profile">
+                  <img
+                    src=""
+                    alt="profile-photo"
+                    class="profile comment-profile"
+                  />
+                  <img
+                    src=""
+                    alt="profile-photo"
+                    class="profile comment-profile"
+                  />
+                  <img
+                    src=""
+                    alt="profile-photo"
+                    class="profile comment-profile"
+                  />
+                </div>
+                <small class="who-like__description"> </small>
+              </div>
+              <small class="comment-info"> </small>
+              <small class="other-views"></small>
             </section>
           </div>
         </section>
         <!-- MAIN RIGHT -->
         <section class="main-right">
+          <!-- MESSAGE CONTAINER -->
           <div class="card message-card message-container">
-            <p class="title">
-              <spam>message</spam>
+            <div class="title">
+              <p>message</p>
               <i class="fa-solid fa-pen-to-square"></i>
-            </p>
+            </div>
             <div class="search-bar message__search-bar">
               <i class="fas fa-search"></i>
               <input
@@ -244,97 +231,98 @@
             </div>
             <section class="message-list">
               <div class="message message-list__1">
-                <a href="/" class="profile post-profile-photo">
+                <a href="/">
                   <img
-                    src="images/profile/profile_3.png"
+                    src=""
                     alt="profile-photo"
                     class="profile user-list__profile"
                   />
                 </a>
                 <div class="message-status">
-                  <div class="poster-name">Tomas Li</div>
-                  <div class="post-message">
-                    <small>Hi, Long time no see</small>
+                  <div class="friends-name"></div>
+                  <div class="friends-message">
+                    <small></small>
                   </div>
                 </div>
               </div>
               <div class="message message-list__2">
-                <a href="/" class="profile post-profile-photo">
+                <a href="/">
                   <img
-                    src="images/profile/profile_7.png"
+                    src=""
                     alt="profile-photo"
                     class="profile user-list__profile"
                   />
                 </a>
                 <div class="message-status">
-                  <div class="poster-name">Lana Rose</div>
-                  <div class="post-message">
-                    <small>Birthday Tomorrow</small>
+                  <div class="friends-name"></div>
+                  <div class="friends-message">
+                    <small></small>
                   </div>
                 </div>
               </div>
               <div class="message message-list__3">
-                <a href="/" class="profile post-profile-photo">
+                <a href="/">
                   <img
-                    src="images/profile/profile_5.png"
+                    src=""
                     alt="profile-photo"
                     class="profile user-list__profile"
                   />
                 </a>
                 <div class="message-status">
-                  <div class="poster-name">No One</div>
-                  <div class="post-message">
-                    <small>Lol u right</small>
+                  <div class="friends-name"></div>
+                  <div class="friends-message">
+                    <small></small>
                   </div>
                 </div>
               </div>
               <div class="message message-list__4">
-                <a href="/" class="profile post-profile-photo">
+                <a href="/">
                   <img
-                    src="images/profile/profile_13.png"
+                    src=""
                     alt="profile-photo"
                     class="profile user-list__profile"
                   />
                 </a>
                 <div class="message-status">
-                  <div class="poster-name">Emily</div>
-                  <div class="post-message">
-                    <small>Emm, sounds good!</small>
+                  <div class="friends-name"></div>
+                  <div class="friends-message">
+                    <small></small>
                   </div>
                 </div>
               </div>
               <div class="message message-list__5">
-                <a href="/" class="profile post-profile-photo">
+                <a href="/">
                   <img
-                    src="images/profile/profile_16.png"
+                    src=""
                     alt="profile-photo"
                     class="profile user-list__profile"
                   />
                 </a>
                 <div class="message-status">
-                  <div class="poster-name">Alex</div>
-                  <div class="post-message">
-                    <small>Hang on, give me a sec</small>
+                  <div class="friends-name"></div>
+                  <div class="friends-message">
+                    <small></small>
                   </div>
                 </div>
               </div>
             </section>
           </div>
+          <!-- REQUEST CONTAINER -->
           <section class="request-container">
             <p class="title">Request</p>
-            <div class="card main-left-card request1">
+            <div class="card main-left-card request-frame">
               <div class="request">
-                <a href="/" class="profile">
+                <a href="/">
                   <img
-                    src="images/profile/profile_9.png"
+                    src=""
                     alt="profile-photo"
-                    class="profile user-list__profile"
+                    class="profile request__profile"
                   />
                 </a>
                 <div class="request-status">
-                  <div class="applier-name">Tomas Li</div>
+                  <div class="applier-name"></div>
                   <div class="applying-information">
-                    <small>8 Mutual Friends</small>
+                    <small></small>
                   </div>
                 </div>
               </div>
@@ -343,19 +331,19 @@
                 <label class="button button-cancel">Decline</label>
               </div>
             </div>
-            <div class="card main-left-card request1">
+            <div class="card main-left-card request-frame">
               <div class="request">
-                <a href="/" class="profile">
+                <a href="/">
                   <img
-                    src="images/profile/profile_17.png"
+                    src=""
                     alt="profile-photo"
-                    class="profile user-list__profile"
+                    class="profile request__profile"
                   />
                 </a>
                 <div class="request-status">
-                  <div class="applier-name">Erica Lyu</div>
+                  <div class="applier-name"></div>
                   <div class="applying-information">
-                    <small>2 Mutual Friends</small>
+                    <small></small>
                   </div>
                 </div>
               </div>

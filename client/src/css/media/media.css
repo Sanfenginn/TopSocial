@@ -1,0 +1,27 @@
+@media only screen and (width <= 480px) {
+}
+
+@media only screen and (width <= 1024px) {
+  .main {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .main-left {
+    display: none;
+  }
+
+  .main-middle {
+  }
+
+  .main-right {
+    display: none;
+  }
+}
+
+@media only screen and (width >= 1025px) and (width <= 2048px) {
+  .main {
+    width: 80vw;
+  }
+}

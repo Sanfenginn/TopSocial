@@ -2,10 +2,16 @@
   display: flex;
   gap: 3%;
   align-items: center;
-  padding: 3%;
+  padding: 1.5%;
   border: 1px solid transparent;
   transition: border-color 0.3s ease-in;
-  border-radius: 10px;
+  border-radius: 100px;
+  box-shadow: 4px 0 8px -4px rgba(0, 0, 0, 0.1),
+    6px 0 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+.message a {
+  display: inline-flex;
 }
 
 .message:hover {
@@ -21,7 +27,7 @@
   font-weight: bold;
 }
 
-.message-status .post-message small {
+.message-status .friends-message small {
   color: var(--color-card-background-color);
   filter: brightness(0.6);
 }
