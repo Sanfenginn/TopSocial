@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
 import topLevelAwait from "vite-plugin-top-level-await";
+import { defineConfig } from "vite";
 import path from "path";
 //必须有
 
@@ -9,9 +9,6 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
       //src下的所有文件都可以用@引用
     },
-  },
-  esbuild: {
-    target: "esnext", // 指定 esbuild 的目标为 'esnext'
   },
   plugins: [
     topLevelAwait({

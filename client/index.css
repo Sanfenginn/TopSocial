@@ -22,37 +22,28 @@
 @import "./src/css/components/message-list.css";
 @import "./src/css/components/request.css";
 
-*/ .container {
+/* import MEDIA */
+@import "./src/css/media/media.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-family: var(--font-family-actor);
+  background-color: var(--color-white);
+  color: var(--color-main-text);
+}
+
+footer {
+  text-align: center;
+}
+
+.container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-}
-
-@media only screen and (width <= 480px) {
-}
-
-@media only screen and (width <= 1024px) {
-  .main {
-    width: 100vw;
-    display: grid;
-    grid-template-columns: auto;
-  }
-
-  .main-left {
-    display: none;
-  }
-
-  .main-middle {
-    /* display: none; */
-  }
-
-  .main-right {
-    display: none;
-  }
-}
-
-@media only screen and (width >= 1025px) and (width <= 2048px) {
-  .main {
-    width: 80vw;
-  }
 }
