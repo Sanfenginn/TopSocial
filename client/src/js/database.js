@@ -3,9 +3,9 @@ import axios from "axios";
 import { getPath } from "./utils.js";
 
 const getHighline = async () => {
-  const path = getPath("highline");
+  // const path = getPath("highline");
+  const path = "http://localhost:51002/highline";
   const response = await getInfo(path);
-  // console.log(response);
   return response.data;
 };
 
@@ -29,34 +29,35 @@ export const highline = await getHighline();
 
 // get the request array from database
 const getRequest = async () => {
-  const path = getPath("request");
+  // const path = getPath("request");
+  const path = "http://localhost:51002/request";
   const response = await getInfo(path);
-  // console.log(response);
   return response.data;
 };
 export const request = await getRequest();
 
 // get message section array from database
 const getMessage = async () => {
-  const path = getPath("message");
+  // const path = getPath("message");
+  const path = "http://localhost:51002/message";
   const response = await getInfo(path);
-  // console.log(response);
   return response.data;
 };
 export const message = await getMessage();
 
 // get current user array from database
 const getCurrentUserProfile = async () => {
-  const path = getPath("profile");
+  // const path = getPath("profile");
+  const path = "http://localhost:51002/profile";
   const response = await getInfo(path);
-  // console.log("response.data: ", response.data);
   return response.data;
 };
 export const profile = await getCurrentUserProfile();
 
 // get post card information array from database
 const getPostCards = async () => {
-  const path = getPath("cards");
+  // const path = getPath("cards");
+  const path = "http://localhost:51002/cards";
   const response = await getInfo(path);
   return response.data;
 };
