@@ -4,7 +4,7 @@ import {
   message,
   profile,
   postCards,
-} from "@/js/database.js";
+} from "./src/js/database.js";
 //导入highLine变量
 
 // SET ALL THE HIGHLINE PICTURES, DESCRIPTION, AND PROFILE PHOTOS FROM DATABASE
@@ -82,7 +82,7 @@ mutualFriend.forEach((element, index) => {
 
 // set the profile photo
 requestProfile.forEach((element, index) => {
-  element.src = requestAllAttributes[index].src.replace("./src", "./public");
+  element.src = requestAllAttributes[index].src.replace("./src", "");
 });
 
 //SET ALL THE PROFILE PHOTOS, MESSAGES, AND NAMES FOR MESSAGE SECTION
@@ -95,8 +95,9 @@ const friendsMessage = messageList.querySelectorAll("small");
 const messageAllAttributes = getAllAttributes(message, "src", "name", "msg");
 //get the src of profile photo
 userListProfile.forEach((element, index) => {
-  element.src = messageAllAttributes[index].src.replace("/src", "./public");
+  element.src = messageAllAttributes[index].src.replace("/src", "");
 });
+
 // get friends'name
 friendsName.forEach((element, index) => {
   element.textContent = messageAllAttributes[index].name;
@@ -112,15 +113,13 @@ const currentUserProfileUsername = document.querySelector(".username");
 const currentUserProfileAccount = document.querySelector(".account");
 
 currentUserProfile.forEach((element) => {
-  element.src = profile.img_src.replace("./src", "./public");
+  element.src = profile.img_src.replace("./src", "");
 });
 
 currentUserProfileUsername.textContent = profile.name;
 currentUserProfileAccount.textContent = profile.at;
 
 //SET THE POST CARDS FOR POST SECTION
-console.log(postCards);
-
 const mainMiddle = document.querySelector(".main-middle");
 
 postCards.forEach((element, index) => {
@@ -129,7 +128,7 @@ postCards.forEach((element, index) => {
 
   // set the profile photo
   const profileImg = newPostCard.querySelector(".post-information img");
-  profileImg.src = postCards[index].profile.src.replace("./src", "./public");
+  profileImg.src = postCards[index].profile.src.replace("./src", "");
 
   //set the poster name
   const posterName = newPostCard.querySelector(
@@ -145,10 +144,7 @@ postCards.forEach((element, index) => {
 
   //set the post picture
   const postPicture = newPostCard.querySelector(".post-picture img");
-  postPicture.src = postCards[index].picture.img_src.replace(
-    "./src",
-    "./public"
-  );
+  postPicture.src = postCards[index].picture.img_src.replace("./src", "");
 
   //SET THE POST COMMENTS
   //set the who like profile
@@ -158,7 +154,7 @@ postCards.forEach((element, index) => {
   whoLikeProfile.forEach((element, index) => {
     element.src = postCards[index].comment.img_src_list[index].replace(
       "./src",
-      "./public"
+      ""
     );
   });
 

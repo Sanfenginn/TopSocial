@@ -3,6 +3,8 @@ import path from "path-browserify";
 export const getPath = (...info) => {
   const dbPath = import.meta.env.VITE_DB_PATH;
   const fullPath = getHttpHeader() + path.join(dbPath, ...info);
+  // const fullPath = "http://localhost:51002/" + path.join(...info);
+  // console.log("fullPath: ", fullPath);
   return fullPath;
 };
 //return fullPath;
