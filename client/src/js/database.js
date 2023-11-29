@@ -7,7 +7,8 @@ import { getPath } from "./utils.js";
 // get the data from database
 const getInfo = async (path) => {
   try {
-    return await axios.get(path);
+    const axiosResponse = await axios.get(path);
+    return axiosResponse.data;
   } catch (error) {
     console.error(error);
   }
@@ -17,24 +18,15 @@ const getInfo = async (path) => {
 const getHighline = async () => {
   const path = getPath("highline");
   const response = await getInfo(path);
-  return response.data;
+  return response;
 };
-
 const highline = await getHighline();
-
-// 什么作用？
-// 1. 通过 getPath 函数，获取后端的path
-// 2. 通过 getInfo 函数，获取后端的数据
-// 3. 通过 await 等待 getInfo 函数返回数据
-// 4. 将数据赋值给 highLine 变量
-// 5. 通过 export 导出 highLine 变量
-// 6. 供其他文件使用
 
 // get the request array from database
 const getRequest = async () => {
   const path = getPath("request");
   const response = await getInfo(path);
-  return response.data;
+  return response;
 };
 const request = await getRequest();
 
@@ -42,7 +34,7 @@ const request = await getRequest();
 const getMessage = async () => {
   const path = getPath("message");
   const response = await getInfo(path);
-  return response.data;
+  return response;
 };
 const message = await getMessage();
 
@@ -50,7 +42,7 @@ const message = await getMessage();
 const getCurrentUserProfile = async () => {
   const path = getPath("profile");
   const response = await getInfo(path);
-  return response.data;
+  return response;
 };
 const profile = await getCurrentUserProfile();
 
@@ -58,7 +50,7 @@ const profile = await getCurrentUserProfile();
 const getPostCards = async () => {
   const path = getPath("cards");
   const response = await getInfo(path);
-  return response.data;
+  return response;
 };
 const postCards = await getPostCards();
 
