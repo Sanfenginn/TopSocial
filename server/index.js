@@ -22,7 +22,9 @@ app.use("/api", router);
 const { errorHandler } = require("./middlewares/errorMiddleware"); // require the error handler middleware
 app.use(errorHandler);
 
-//run the server
-app.listen(51001, () => {
-  console.log("Server is running on http://localhost:51001");
-});
+// run the server
+// app.listen(51001, () => {
+//   console.log("Server is running on http://localhost:51001");
+// });
+
+module.exports = app;
