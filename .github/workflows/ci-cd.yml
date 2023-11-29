@@ -34,6 +34,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install json-server
+        run: npm install -g json-server
+
       - name: Start JSON Server
         run: json-server --watch db.json --port 51002
 
