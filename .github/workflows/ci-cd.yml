@@ -32,7 +32,7 @@ jobs:
         run: ssh -V
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
 
       - name: Output npm log
         if: failure() # 只有在前面的步骤失败时才运行
