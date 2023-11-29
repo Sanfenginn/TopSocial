@@ -1,0 +1,10 @@
+.main-left {
+  grid-column: 1/2;
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+  position: sticky;
+  top: 4.9%;
+  height: 88vh;
+}

@@ -18,4 +18,8 @@ export default defineConfig({
       promiseImportName: (i) => `__tla_${i}`,
     }),
   ],
+  server: {
+    port: 51003, // 您希望的端口号
+  },
+  //指定服务器端口
 });

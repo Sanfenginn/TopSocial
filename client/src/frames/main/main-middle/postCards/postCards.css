@@ -1,0 +1,49 @@
+/* SET THE ACTION ICON SECTION */
+.action-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2%;
+  padding: 0 2%;
+  font-size: 1.2rem;
+}
+
+.action-icon:hover {
+  cursor: pointer;
+}
+
+.action-icon__left {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* SET THE COMMENT SECTION */
+.comment {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  margin-top: 0;
+  justify-content: space-between;
+  line-height: 1.4;
+}
+
+.who-like {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5%;
+  align-items: center;
+}
+
+.who-like__profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+
+.other-views {
+  color: var(--color-card-background-color);
+  filter: brightness(0.6);
+}

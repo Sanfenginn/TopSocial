@@ -1,0 +1,28 @@
+.request-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.request-container .title {
+  margin: 0 0 0 3%;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.request-container .request-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+  padding: 1.5rem;
+}
+
+.request-container .two-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  margin-top: 0.25vh;
+}

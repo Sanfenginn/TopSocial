@@ -1,10 +1,10 @@
+//IMPORT PACKAGES
 import path from "path-browserify";
 
-export const getPath = (...info) => {
+//GET FULLPATH
+const getPath = (...info) => {
   const dbPath = import.meta.env.VITE_DB_PATH;
   const fullPath = getHttpHeader() + path.join(dbPath, ...info);
-  // const fullPath = "http://localhost:51002/" + path.join(...info);
-  // console.log("fullPath: ", fullPath);
   return fullPath;
 };
 //return fullPath;
@@ -13,6 +13,7 @@ export const getPath = (...info) => {
 // 1. 通过 import.meta.env.VITE_DB_PATH 获取后端的path
 // 2. 用于请求接口时，拼接请求地址
 
+//GET WEBSITE RUNNING MODE
 export const getWebsiteRunningMode = () => {
   return import.meta.env.MODE;
 };
@@ -25,6 +26,7 @@ export const getWebsiteRunningMode = () => {
 // 6. 通过 import.meta.env.VITE_APP_* 获取环境变量
 //什么是不同的mode？
 
+//GET HTTP HEADER
 export const getHttpHeader = () => {
   if (getWebsiteRunningMode() === "development") {
     return "http://";
@@ -36,3 +38,17 @@ export const getHttpHeader = () => {
 // 1. 根据当前运行环境，返回 http 或者 https
 // 2. 用于请求接口时，拼接请求地址
 // 接下来可以写getPath函数了，获取后端的path
+
+//SET A PROJECT TO GET ALL THE ATTRIBUTE THAT WE NEED FROM ARRAY THAT WE GOT FROM DATABASE
+const getAllAttributes = (array, attribute1, attribute2, attribute3) => {
+  const allAttributes = array.map((item) => {
+    return {
+      [attribute1]: item[attribute1],
+      [attribute2]: item[attribute2],
+      [attribute3]: item[attribute3],
+    };
+  });
+  return allAttributes;
+};
+
+export { getPath, getAllAttributes };
