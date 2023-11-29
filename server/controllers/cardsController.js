@@ -92,12 +92,12 @@ const deleteCardById = async (req, res, next) => {
   } catch (error) {
     console.error("error: ", error);
     next(error);
-    // if (error.response.status === 404) {
-    //   res.status(404).send({
-    //     status: 404,
-    //     msg: `${id} is nor exist, please check the id you entered`,
-    //   });
-    // }
+    if (error.response.status === 404) {
+      res.status(404).send({
+        status: 404,
+        msg: `${id} is nor exist, please check the id you entered`,
+      });
+    }
   }
 };
 
