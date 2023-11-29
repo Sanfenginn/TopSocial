@@ -5,5 +5,6 @@
   "doctype-first": true,
   "spec-char-escape": true,
   "id-unique": true,
-  "src-not-empty": false
+  "src-not-empty": false,
+  "ignore": ["coverage/**", "ignore-file.html"]
 }
