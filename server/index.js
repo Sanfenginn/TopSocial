@@ -1,9 +1,6 @@
 //require some modules
 const express = require("express");
 const cors = require("cors");
-const axios = require("axios");
-const moment = require("moment");
-const bodyParser = require("body-parser");
 
 // create an web server
 const app = express();
