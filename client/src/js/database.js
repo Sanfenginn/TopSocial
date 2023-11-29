@@ -1,64 +1,57 @@
+//IMPORT PACKAGES
 import axios from "axios";
 
+//IMPORT FUNCTIONS
 import { getPath } from "./utils.js";
 
-const getHighline = async () => {
-  // const path = getPath("highline");
-  const path = "https://project1.sanfenginn.com:51002/api2/highline"; //"http://localhost:51002/api2/highline";
-  const response = await getInfo(path);
-  return response.data;
-};
-
+// get the data from database
 const getInfo = async (path) => {
   try {
-    return await axios.get(path);
+    const axiosResponse = await axios.get(path);
+    return axiosResponse.data;
   } catch (error) {
     console.error(error);
   }
 };
 
-export const highline = await getHighline();
-
-// 什么作用？
-// 1. 通过 getPath 函数，获取后端的path
-// 2. 通过 getInfo 函数，获取后端的数据
-// 3. 通过 await 等待 getInfo 函数返回数据
-// 4. 将数据赋值给 highLine 变量
-// 5. 通过 export 导出 highLine 变量
-// 6. 供其他文件使用
+// get highline array from database
+const getHighline = async () => {
+  const path = getPath("highline");
+  const response = await getInfo(path);
+  return response;
+};
+const highline = await getHighline();
 
 // get the request array from database
 const getRequest = async () => {
-  // const path = getPath("request");
-  const path = "https://project1.sanfenginn.com:51002/api2/request"; //"http://localhost:51002/api2/request";
+  const path = getPath("request");
   const response = await getInfo(path);
-  return response.data;
+  return response;
 };
-export const request = await getRequest();
+const request = await getRequest();
 
 // get message section array from database
 const getMessage = async () => {
-  // const path = getPath("message");
-  const path = "https://project1.sanfenginn.com:51002/api2/message"; // "http://localhost:51002/api2/message";
+  const path = getPath("message");
   const response = await getInfo(path);
-  return response.data;
+  return response;
 };
-export const message = await getMessage();
+const message = await getMessage();
 
 // get current user array from database
 const getCurrentUserProfile = async () => {
-  // const path = getPath("profile");
-  const path = "https://project1.sanfenginn.com:51002/api2/profile"; //"http://localhost:51002/api2/profile";
+  const path = getPath("profile");
   const response = await getInfo(path);
-  return response.data;
+  return response;
 };
-export const profile = await getCurrentUserProfile();
+const profile = await getCurrentUserProfile();
 
 // get post card information array from database
 const getPostCards = async () => {
-  // const path = getPath("cards");
-  const path = "https://project1.sanfenginn.com:51002/api2/cards"; //"http://localhost:51002/api2/cards";
+  const path = getPath("cards");
   const response = await getInfo(path);
-  return response.data;
+  return response;
 };
-export const postCards = await getPostCards();
+const postCards = await getPostCards();
+
+export { highline, request, message, profile, postCards };
