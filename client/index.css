@@ -29,4 +29,4 @@
 @import url("./src/components/request.css");
 
 /* import MEDIA */
-@import "./src/media/media.css";
+@import url("./src/media/media.css");
