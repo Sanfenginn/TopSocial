@@ -17,6 +17,6 @@ module.exports = {
     sourceType: "module",
     requireConfigFile: false,
   },
-  ignorePatterns: ["client/dist/**"],
+  ignorePatterns: ["client/dist/**", "tests/**"],
   rules: {},
 };
