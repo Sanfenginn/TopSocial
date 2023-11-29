@@ -23,8 +23,8 @@ const { errorHandler } = require("./middlewares/errorMiddleware"); // require th
 app.use(errorHandler);
 
 // run the server
-// app.listen(51001, () => {
-//   console.log("Server is running on http://localhost:51001");
-// });
+app.listen(51001, () => {
+  console.log("Server is running on http://localhost:51001");
+});
 
-module.exports = app;
+// module.exports = app;
