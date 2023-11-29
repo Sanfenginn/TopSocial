@@ -13,15 +13,25 @@ jobs:
     if: >
       github.event_name == 'pull_request' &&
       github.event.action != 'closed'
+    strategy:
+      matrix:
+        node-version: [14.x]
 
     steps:
       - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
 
       - name: Check SSH version
         run: ssh -V
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
 
       - name: Check HTML
         run: npx htmlhint "**/*.html" --ignore "coverage/**/*"
