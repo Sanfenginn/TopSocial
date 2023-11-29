@@ -6,5 +6,5 @@
   "spec-char-escape": true,
   "id-unique": true,
   "src-not-empty": false,
-  "ignore": ["coverage/**", "ignore-file.html"]
+  "ignore": ["coverage/lcov-report/index.html"]
 }

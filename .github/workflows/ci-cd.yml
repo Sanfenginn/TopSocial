@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Check HTML
-        run: npx htmlhint "**/*.html"
+        run: npx htmlhint "**/*.html" --ignore "coverage/**/*"
 
       - name: Check CSS
         run: |
