@@ -31,11 +31,15 @@ jobs:
       - name: Check SSH version
         run: ssh -V
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Install server dependencies
+        run: |
+          cd server
+          npm install
 
-      - name: Run tests
-        run: npm test
+      - name: Run server tests
+        run: |
+          cd server
+          npm test
 
       - name: Output npm log
         if: failure() # 只有在前面的步骤失败时才运行
