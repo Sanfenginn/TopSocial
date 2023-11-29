@@ -4,16 +4,16 @@
   padding-left: 5%;
 }
 
+.main-left .navbar a {
+  padding: 4.5%;
+  font-weight: bold;
+}
+
 .main-left .navbar a:hover {
   background-color: var(--color-white);
   border-radius: 10px;
   transition: all 0.3s ease-in;
   cursor: pointer;
-}
-
-.main-left .navbar a {
-  padding: 4.5%;
-  font-weight: bold;
 }
 
 .main-left .navbar a i {

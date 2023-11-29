@@ -18,12 +18,6 @@
   height: auto;
 }
 
-.highline__picture:hover,
-.highline__profile:hover,
-.highline__small:hover {
-  cursor: pointer;
-}
-
 .highline__small {
   position: absolute;
   font-size: 0.8rem;
@@ -33,4 +27,10 @@
   color: var(--color-white);
   filter: brightness(90%);
   font-family: var(--font-family-lato);
+}
+
+.highline__picture:hover,
+.highline__profile:hover,
+.highline__small:hover {
+  cursor: pointer;
 }
