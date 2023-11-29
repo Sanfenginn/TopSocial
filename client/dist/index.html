@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Top Social</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Jinyuan Zhang" />
+    <meta name="description" content="This is a TopSocial website" />
+    <meta name="keyword" content="html css javascript vite node.js express" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/icon-browser-tab.png" type="image/x-icon" />
+    <!-- IMPORT FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/997ebdf795.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="theme-color" content="#f5f5f3" />
+    <script type="module" crossorigin src="/assets/index-Gi5slB_Y.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DJRW7BKG.css">
+  </head>
+  <body>
+    <section class="container">
+      <!-- HEADER, INCLUDE BRAND NAME, SEARCH BAR AND CREATE BUTTON, PROFILE BUTTON -->
+      <header class="header-container">
+        <!--  LOGO, BRAND NAME -->
+        <a href="/" class="logo">TOPSOCIAL</a>
+        <!-- SEARCH BAR -->
+        <div class="search-bar header__search-bar">
+          <i class="fas fa-search"></i>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search for Creators"
+          />
+        </div>
+        <!-- CREATING BUTTON AND PROFILE PHOTO -->
+        <div class="create-profile">
+          <label for="post-input-text" class="button button-primary"
+            >Create</label
+          >
+          <img
+            src=""
+            alt="profile-photo"
+            class="profile current-user-profile"
+          />
+        </div>
+      </header>
+      <main class="main">
+        <!-- MAIN LEFT -->
+        <section class="main-left">
+          <div class="card main-left-card main-left__profile">
+            <a href="/">
+              <img
+                src=""
+                alt="profile-photo"
+                class="profile current-user-profile"
+              />
+            </a>
+            <div class="main-left__information">
+              <div class="username"></div>
+              <small class="account"></small>
+            </div>
+          </div>
+          <div class="card main-left-card navbar">
+            <a><i class="fas fa-home"></i>Home</a>
+            <a><i class="fas fa-compass"></i>Explore</a>
+            <a><i class="fas fa-bell"></i>Notifications</a>
+            <a><i class="fa-solid fa-envelope"></i>Messages</a>
+            <a><i class="fas fa-bookmark"></i>Bookmarks</a>
+            <a><i class="fas fa-chart-area"></i>Analytics</a>
+            <a><i class="fas fa-book-reader"></i>Theme</a>
+            <a><i class="fa-solid fa-gear"></i>Setting</a>
+          </div>
+          <label for="post-input-text" class="button button-create-post"
+            >Create Post</label
+          >
+        </section>
+        <!-- MAIN MIDDLE -->
+        <section class="main-middle">
+          <!-- HIGHLINE -->
+          <div class="highline-container">
+            <section class="highline highline-container__picture1">
+              <img
+                src=""
+                alt="profile-photo"
+                class="profile highline__profile"
+              />
+              <img src="" alt="highline-1" class="highline__picture" />
+              <small class="highline__small"></small>
+            </section>
+            <section class="highline highline-container__picture2">
+              <img
+                src=""
+                alt="profile-photo"
+                class="profile highline__profile"
+              />
+              <img src="" alt="highline-2" class="highline__picture" />
+              <small class="highline__small"></small>
+            </section>
+            <section class="highline highline-container__picture3">
+              <img
+                src=""
+                alt="profile-photo"
+                class="profile highline__profile"
+              />
+              <img src="" alt="highline-1" class="highline__picture" />
+              <small class="highline__small"></small>
+            </section>
+            <section class="highline highline-container__picture4">
+              <img
+                src=""
+                alt="profile-photo"
+                class="profile highline__profile"
+              />
+              <img src="" alt="highline-1" class="highline__picture" />
+              <small class="highline__small"></small>
+            </section>
+            <section class="highline highline-container__picture5">
+              <img
+                src=""
+                alt="profile-photo"
+                class="profile highline__profile"
+              />
+              <img src="" alt="highline-1" class="highline__picture" />
+              <small class="highline__small"></small>
+            </section>
+            <section class="highline highline-container__picture6">
+              <img
+                src=""
+                alt="profile-photo"
+                class="profile highline__profile"
+              />
+              <img src="" alt="highline-1" class="highline__picture" />
+              <small class="highline__small"></small>
+            </section>
+          </div>
+          <!-- POST INPUT -->
+          <div class="post-input">
+            <section class="search-bar post-input__search-bar">
+              <img
+                src=""
+                alt="profile-photo"
+                class="profile current-user-profile post-input__profile"
+              />
+              <input
+                type="text"
+                id="post-input-text"
+                name="post-input-text"
+                placeholder="What is on your mind, Jinyuan?"
+              />
+            </section>
+            <label class="button post-input-button">Post</label>
+          </div>
+          <!--POST CARDS TEMPLATE-->
+          <div
+            id="template"
+            class="card posts-card posts"
+            style="display: none"
+          >
+            <section class="post-information">
+              <a href="/">
+                <img src="" alt="profile-photo" class="profile post-profile" />
+              </a>
+              <div class="post-status">
+                <div class="poster-name"></div>
+                <div class="post-location-time">
+                  <small></small>
+                </div>
+              </div>
+            </section>
+            <section class="post-picture">
+              <img src="" alt="profile-photo" />
+            </section>
+            <section class="action-icon">
+              <div class="action-icon__left">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-comment-dots"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+              </div>
+              <div class="action-icon__right">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+            </section>
+            <section class="comment">
+              <div class="who-like">
+                <div class="who-like__profile">
+                  <img
+                    src=""
+                    alt="profile-photo"
+                    class="profile comment-profile"
+                  />
+                  <img
+                    src=""
+                    alt="profile-photo"
+                    class="profile comment-profile"
+                  />
+                  <img
+                    src=""
+                    alt="profile-photo"
+                    class="profile comment-profile"
+                  />
+                </div>
+                <small class="who-like__description"> </small>
+              </div>
+              <small class="comment-info"> </small>
+              <small class="other-views"></small>
+            </section>
+          </div>
+        </section>
+        <!-- MAIN RIGHT -->
+        <section class="main-right">
+          <!-- MESSAGE CONTAINER -->
+          <div class="card message-card message-container">
+            <div class="title">
+              <p>message</p>
+              <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <div class="search-bar message__search-bar">
+              <i class="fas fa-search"></i>
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder="Search Messages"
+              />
+            </div>
+            <div class="options">
+              <p>Primary</p>
+              <p>General</p>
+              <p>Requests</p>
+            </div>
+            <section class="message-list">
+              <div class="message message-list__1">
+                <a href="/">
+                  <img
+                    src=""
+                    alt="profile-photo"
+                    class="profile user-list__profile"
+                  />
+                </a>
+                <div class="message-status">
+                  <div class="friends-name"></div>
+                  <div class="friends-message">
+                    <small></small>
+                  </div>
+                </div>
+              </div>
+              <div class="message message-list__2">
+                <a href="/">
+                  <img
+                    src=""
+                    alt="profile-photo"
+                    class="profile user-list__profile"
+                  />
+                </a>
+                <div class="message-status">
+                  <div class="friends-name"></div>
+                  <div class="friends-message">
+                    <small></small>
+                  </div>
+                </div>
+              </div>
+              <div class="message message-list__3">
+                <a href="/">
+                  <img
+                    src=""
+                    alt="profile-photo"
+                    class="profile user-list__profile"
+                  />
+                </a>
+                <div class="message-status">
+                  <div class="friends-name"></div>
+                  <div class="friends-message">
+                    <small></small>
+                  </div>
+                </div>
+              </div>
+              <div class="message message-list__4">
+                <a href="/">
+                  <img
+                    src=""
+                    alt="profile-photo"
+                    class="profile user-list__profile"
+                  />
+                </a>
+                <div class="message-status">
+                  <div class="friends-name"></div>
+                  <div class="friends-message">
+                    <small></small>
+                  </div>
+                </div>
+              </div>
+              <div class="message message-list__5">
+                <a href="/">
+                  <img
+                    src=""
+                    alt="profile-photo"
+                    class="profile user-list__profile"
+                  />
+                </a>
+                <div class="message-status">
+                  <div class="friends-name"></div>
+                  <div class="friends-message">
+                    <small></small>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- REQUEST CONTAINER -->
+          <section class="request-container">
+            <p class="title">Request</p>
+            <div class="card main-left-card request-frame">
+              <div class="request">
+                <a href="/">
+                  <img
+                    src=""
+                    alt="profile-photo"
+                    class="profile request__profile"
+                  />
+                </a>
+                <div class="request-status">
+                  <div class="applier-name"></div>
+                  <div class="applying-information">
+                    <small></small>
+                  </div>
+                </div>
+              </div>
+              <div class="two-buttons">
+                <label class="button button-accept">Accept</label>
+                <label class="button button-cancel">Decline</label>
+              </div>
+            </div>
+            <div class="card main-left-card request-frame">
+              <div class="request">
+                <a href="/">
+                  <img
+                    src=""
+                    alt="profile-photo"
+                    class="profile request__profile"
+                  />
+                </a>
+                <div class="request-status">
+                  <div class="applier-name"></div>
+                  <div class="applying-information">
+                    <small></small>
+                  </div>
+                </div>
+              </div>
+              <div class="two-buttons">
+                <label class="button button-accept">Accept</label>
+                <label class="button button-cancel">Decline</label>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </section>
+  </body>
+  <footer><p>&copy; 2023 Jinyuan Zhang. All Rights Reserved.</p></footer>
+</html>
