@@ -37,10 +37,6 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Output npm log
-        if: failure() # 只有在前面的步骤失败时才运行
-        run: cat /home/runner/.npm/_logs/*.log
-
       - name: Check HTML
         run: npx htmlhint "**/*.html" --ignore "coverage/**/*"
 
