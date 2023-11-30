@@ -54,4 +54,4 @@ export const getPostCards = async () => {
 };
 const postCards = await getPostCards();
 
-// export { highline, request, message, profile, postCards };
+export { highline, request, message, profile, postCards };
