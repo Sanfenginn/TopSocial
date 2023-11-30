@@ -46,15 +46,15 @@ jobs:
         working-directory: ./server
         run: npm ci
 
-        # 获取json server的在服务器上的地址，用于测试.对所有步骤都生效，不过这个步骤是在哪个目录中执行
-      # - name: Set Environment Variables
-      - name: Print Environment Variables
-        run: echo "DATABASE_URL = $DATABASE_URL"
+        # 获取json server的在服务器上的地址，用于测试.对所有步骤都生效，不管这个步骤是在哪个目录中执行
+      - name: Set Environment Variables for server
+        run: |
+          echo "DATABASE_URL=${{ secrets.DB_URL_TS_SERVER }}" >> $GITHUB_ENV
 
-        # 进行后端jet，supertest 集成测试,
+      # 进行后端jet，supertest 集成测试,
       - name: Run Jest Test
-        env:
-          DATABASE_URL: "http://project1.sanfenginn.com/api2/"
+        # env:
+        #   DATABASE_URL: "http://project1.sanfenginn.com/api2/"
         run: npm test
 
       # 安装前端依赖
@@ -62,9 +62,10 @@ jobs:
         working-directory: ./client
         run: npm ci
 
-      # - name: Set Environment Variables
-      #   run: |
-      #     echo "VITE_DB_PATH=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
+      - name: Set Environment Variables for client
+        run: |
+          echo "VITE_DB_PATH=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
+
       # 进行前端单元测试
       - name: Run Unit Testing for client
         working-directory: ./client
