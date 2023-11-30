@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1701363362368" clover="3.2.0">
-  <project timestamp="1701363362368" name="All files">
+<coverage generated="1701364537948" clover="3.2.0">
+  <project timestamp="1701364537948" name="All files">
     <metrics statements="94" coveredstatements="82" conditionals="11" coveredconditionals="9" methods="10" coveredmethods="9" elements="115" coveredelements="100" complexity="0" loc="94" ncloc="94" packages="1" files="2" classes="2"/>
     <file name="database.js" path="/Users/jinyuanzhang/Websites/TopSocial/client/src/js/database.js">
       <metrics statements="57" coveredstatements="55" conditionals="7" coveredconditionals="6" methods="6" coveredmethods="6"/>
