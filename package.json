@@ -10,13 +10,7 @@
   "jest": {
     "testEnvironment": "node",
     "coverageDirectory": "coverage",
-    "collectCoverage": true,
-    "roots": [
-      "<rootDir>/server"
-    ],
-    "modulePaths": [
-      "<rootDir>"
-    ]
+    "collectCoverage": true
   },
   "keywords": [],
   "author": "",
