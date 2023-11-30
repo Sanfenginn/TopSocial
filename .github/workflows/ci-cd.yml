@@ -51,7 +51,7 @@ jobs:
 
         # 获取json server的在服务器上的地址，用于测试.对所有步骤都生效，不过这个步骤是在哪个目录中执行
       # - name: Set Environment Variables
-      #   run: echo "DATABASE_URL=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
+      #   run: ｜ echo "DATABASE_URL=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
 
       #   # 进行后端jet，supertest 集成测试,
       # - name: Run Jest Test
@@ -63,7 +63,8 @@ jobs:
         run: npm ci
 
       - name: Set Environment Variables
-        run: echo "VITE_DB_PATH=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
+        run: |
+          echo "VITE_DB_PATH=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
 
       - name: Print Environment Variables
         run: echo "VITE_DB_PATH = $VITE_DB_PATH"
@@ -71,6 +72,8 @@ jobs:
         # 进行前端单元测试
       - name: Run Unit Testing for client
         working-directory: ./client
+        env:
+          VITE_DB_PATH: "project1.sanfenginn.com/api2/"
         run: npm run test
 
         # 检查HTML代码
