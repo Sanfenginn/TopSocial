@@ -55,7 +55,9 @@ describe("API Calls Tests", () => {
       },
       // ... 其他数据
     ];
-    mock.onGet("http://localhost:51002/request").reply(200, expectedData);
+
+    const path = getPath("request");
+    mock.onGet(path).reply(200, expectedData);
 
     const data = await getRequest();
     expect(data).toEqual(expectedData);
@@ -95,8 +97,8 @@ describe("API Calls Tests", () => {
       },
     ];
 
-    mock.onGet("http://localhost:51002/message").reply(200, expectedData);
-
+    const path = getPath("message");
+    mock.onGet(path).reply(200, expectedData);
     const data = await getMessage();
     expect(data).toEqual(expectedData);
   });
@@ -108,8 +110,9 @@ describe("API Calls Tests", () => {
       at: "@Jinyuanzhang1992",
       img_src: "./src/images/profile/profile_18.jpg",
     };
-    mock.onGet("http://localhost:51002/profile").reply(200, expectedData);
 
+    const path = getPath("profile");
+    mock.onGet(path).reply(200, expectedData);
     const data = await getCurrentUserProfile();
     expect(data).toEqual(expectedData);
   });
@@ -213,7 +216,8 @@ describe("API Calls Tests", () => {
       },
     ];
 
-    mock.onGet("http://localhost:51002/cards").reply(200, expectedData);
+    const path = getPath("cards");
+    mock.onGet(path).reply(200, expectedData);
 
     const data = await getPostCards();
     expect(data).toEqual(expectedData);
