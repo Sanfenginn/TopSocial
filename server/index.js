@@ -1,6 +1,7 @@
 //require some modules
 const express = require("express");
 const cors = require("cors");
+require("dotenv").config();
 
 // create an web server
 const app = express();
@@ -23,8 +24,8 @@ const { errorHandler } = require("./middlewares/errorMiddleware"); // require th
 app.use(errorHandler);
 
 // run the server
-// app.listen(51001, () => {
-//   console.log("Server is running on http://localhost:51001");
-// });
+app.listen(51001, () => {
+  console.log("Server is running on http://localhost:51001");
+});
 
 module.exports = app;

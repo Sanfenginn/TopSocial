@@ -5,7 +5,7 @@ import axios from "axios";
 import { getPath } from "./utils.js";
 
 // get the data from database
-const getInfo = async (path) => {
+export const getInfo = async (path) => {
   try {
     const axiosResponse = await axios.get(path);
     return axiosResponse.data;
@@ -15,7 +15,7 @@ const getInfo = async (path) => {
 };
 
 // get highline array from database
-const getHighline = async () => {
+export const getHighline = async () => {
   const path = getPath("highline");
   const response = await getInfo(path);
   return response;
@@ -23,7 +23,7 @@ const getHighline = async () => {
 const highline = await getHighline();
 
 // get the request array from database
-const getRequest = async () => {
+export const getRequest = async () => {
   const path = getPath("request");
   const response = await getInfo(path);
   return response;
@@ -31,7 +31,7 @@ const getRequest = async () => {
 const request = await getRequest();
 
 // get message section array from database
-const getMessage = async () => {
+export const getMessage = async () => {
   const path = getPath("message");
   const response = await getInfo(path);
   return response;
@@ -39,7 +39,7 @@ const getMessage = async () => {
 const message = await getMessage();
 
 // get current user array from database
-const getCurrentUserProfile = async () => {
+export const getCurrentUserProfile = async () => {
   const path = getPath("profile");
   const response = await getInfo(path);
   return response;
@@ -47,11 +47,11 @@ const getCurrentUserProfile = async () => {
 const profile = await getCurrentUserProfile();
 
 // get post card information array from database
-const getPostCards = async () => {
+export const getPostCards = async () => {
   const path = getPath("cards");
   const response = await getInfo(path);
   return response;
 };
 const postCards = await getPostCards();
 
-export { highline, request, message, profile, postCards };
+// export { highline, request, message, profile, postCards };

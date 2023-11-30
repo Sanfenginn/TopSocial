@@ -1,7 +1,10 @@
 const axios = require("axios");
+const { getUrl } = require("../middlewares/getUrl");
 
 // const uniqueUrl = "http://localhost:51002/cards";
-const uniqueUrl = "http://project1.sanfenginn.com/api2/cards";
+// const uniqueUrl = "http://project1.sanfenginn.com/api2/cards";
+const uniqueUrl = getUrl("cards");
+console.log("uniqueUrl: ", uniqueUrl);
 
 const getCards = async (req, res, next) => {
   if (req.query.id) {
