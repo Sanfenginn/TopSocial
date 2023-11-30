@@ -64,6 +64,8 @@ jobs:
         # 进行前端单元测试
       - name: Run Unit Testing for client
         working-directory: ./client
+        env:
+          VITE_DB_PATH: ${{ secrets.DB_URL_TS }}"
         run: npm run test
 
         # 检查HTML代码

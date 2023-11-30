@@ -2,9 +2,6 @@ const axios = require("axios");
 const { getUrl } = require("../middlewares/getUrl");
 
 const uniqueUrl = getUrl("cards");
-console.log("uniqueUrl: ", typeof uniqueUrl);
-// const uniqueUrl = "http://localhost:51002/cards";
-console.log("uniqueUrl: ", uniqueUrl);
 
 const getCards = async (req, res, next) => {
   if (req.query.id) {
