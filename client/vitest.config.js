@@ -10,7 +10,7 @@ export default defineConfig({
   test: {
     env: {
       MODE: "development", // 设置默认模式为 'test'
-      VITE_DB_PATH: "", //"project1.sanfenginn.com/api2/",
+      VITE_DB_PATH: process.env.VITE_DB_PATH, //"project1.sanfenginn.com/api2/",
     },
     // 在此处添加你的测试配置
     globals: true,

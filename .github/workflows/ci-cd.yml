@@ -72,8 +72,6 @@ jobs:
         # 进行前端单元测试
       - name: Run Unit Testing for client
         working-directory: ./client
-        env:
-          VITE_DB_PATH: "project1.sanfenginn.com/api2/"
         run: npm run test
 
         # 检查HTML代码
