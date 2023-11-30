@@ -34,15 +34,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # - name: Install json-server
-      #   run: npm install -g json-server
-
-      # - name: Start JSON Server
-      #   run: json-server --watch server/db.json --port 51002 --no-cors
-
-      # - name: Send HTTP Request
-      #   run: curl http://localhost:51002/cards
-
       - name: Run tests
         run: npm test
 
