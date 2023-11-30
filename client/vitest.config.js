@@ -20,7 +20,7 @@ export default defineConfig({
   },
   coverage: {
     // 覆盖率配置
-    reporter: ["text", "json", "html"],
+    reporter: ["lcov"],
     // 可以添加更多的覆盖率配置项，如 include, exclude 等
     dir: "./coverage_reports",
   },
