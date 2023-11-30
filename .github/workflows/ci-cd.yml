@@ -55,7 +55,7 @@ jobs:
 
         # 进行后端jet，supertest 集成测试,
       - name: Run Jest Test
-        run: npm run test
+        run: npm test
 
       # 安装前端依赖
       - name: Install dependencies for client
