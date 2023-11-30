@@ -52,7 +52,7 @@ jobs:
           echo "DATABASE_URL=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
           echo "VITE_DB_PATH=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
 
-        # 进行后端jet，supertest 集成测试
+        # 进行后端jet，supertest 集成测试,
       - name: Run Jest Test
         run: npm run test
 
