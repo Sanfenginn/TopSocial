@@ -53,21 +53,19 @@ jobs:
 
         # 进行后端jet，supertest 集成测试,
       - name: Run Jest Test
-        # env:
-        #   DATABASE_URL: "project1.sanfenginn.com/api2/"
+        env:
+          DATABASE_URL: "http://project1.sanfenginn.com/api2/"
         run: npm test
-        #${{ secrets.DB_URL_TS }}
 
       # 安装前端依赖
       - name: Install dependencies for client
         working-directory: ./client
         run: npm ci
 
-      - name: Set Environment Variables
-        run: |
-          echo "VITE_DB_PATH=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
-
-        # 进行前端单元测试
+      # - name: Set Environment Variables
+      #   run: |
+      #     echo "VITE_DB_PATH=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
+      # 进行前端单元测试
       - name: Run Unit Testing for client
         working-directory: ./client
         run: npm run test
