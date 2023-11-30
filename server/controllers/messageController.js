@@ -1,11 +1,11 @@
 const axios = require("axios");
 const { getUrl } = require("../middlewares/getUrl");
 
-const uniqueUrl = "http://localhost:51002/message";
+// const uniqueUrl = "http://localhost:51002/message";
 
 const getMessage = async (req, res, next) => {
   try {
-    // const uniqueUrl = getUrl("message");
+    const uniqueUrl = getUrl("message");
 
     const axiosResponse = await axios.get(uniqueUrl);
     console.log("response: ", axiosResponse.data);

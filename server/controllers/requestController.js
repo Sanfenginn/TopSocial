@@ -3,8 +3,8 @@ const { getUrl } = require("../middlewares/getUrl");
 
 const getRequest = async (req, res, next) => {
   try {
-    // const uniqueUrl = getUrl("request");
-    const uniqueUrl = "http://localhost:51002/request";
+    const uniqueUrl = getUrl("request");
+    // const uniqueUrl = "http://localhost:51002/request";
     const axiosResponse = await axios.get(uniqueUrl);
     console.log("response: ", axiosResponse.data);
     res.status(200).json({

@@ -1,8 +1,8 @@
 const axios = require("axios");
 const { getUrl } = require("../middlewares/getUrl");
 
-// const uniqueUrl = getUrl("highline");
-const uniqueUrl = "http://localhost:51002/highline";
+const uniqueUrl = getUrl("highline");
+// const uniqueUrl = "http://localhost:51002/highline";
 
 const getHighline = async (req, res, next) => {
   try {
