@@ -13,34 +13,48 @@ jobs:
     if: >
       github.event_name == 'pull_request' &&
       github.event.action != 'closed'
+    strategy:
+      matrix:
+        node-version: [14.x]
 
     steps:
       - uses: actions/checkout@v2
 
+      - name: Clear npm cache
+        run: npm cache clean --force
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
       - name: Check SSH version
         run: ssh -V
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
 
+      - name: Run tests
+        run: npm test
+
       - name: Check HTML
-        run: npx htmlhint "**/*.html"
+        run: npx htmlhint "**/*.html" --ignore "coverage/**/*"
 
-      # - name: Check CSS
-      #   run: |
-      #     if compgen -G "**/*.css" > /dev/null; then
-      #       npx stylelint "**/*.css"
-      #     else
-      #       echo "No CSS files found, skipping stylelint."
-      #     fi
+      - name: Check CSS
+        run: |
+          if compgen -G "**/*.css" > /dev/null; then
+            npx stylelint "**/*.css"
+          else
+            echo "No CSS files found, skipping stylelint."
+          fi
 
-      # - name: Check JavaScript
-      #   run: |
-      #     if compgen -G "**/*.js" > /dev/null; then
-      #       npx eslint "**/*.js" --no-cache --config .eslintrc.js
-      #     else
-      #       echo "No JavaScript files found, skipping eslint."
-      #     fi
+      - name: Check JavaScript
+        run: |
+          if compgen -G "**/*.js" > /dev/null; then
+            npx eslint "**/*.js" --no-cache --config .eslintrc.js
+          else
+            echo "No JavaScript files found, skipping eslint."
+          fi
 
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master

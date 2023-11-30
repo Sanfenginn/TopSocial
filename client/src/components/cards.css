@@ -6,7 +6,7 @@
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgb(0 0 0/ 10%), 0 6px 20px rgb(0 0 0 / 10%);
 }
 
 .main-left-card {
@@ -18,5 +18,5 @@
 }
 
 .message-card {
-  padding: 2% 3% 7% 3%;
+  padding: 2% 3% 7%;
 }

@@ -1,6 +1,7 @@
 const axios = require("axios");
 
-const uniqueUrl = "http://localhost:50010/cards";
+// const uniqueUrl = "http://localhost:51002/cards";
+const uniqueUrl = "http://project1.sanfenginn.com/api2/cards";
 
 const getCards = async (req, res, next) => {
   if (req.query.id) {
@@ -91,13 +92,13 @@ const deleteCardById = async (req, res, next) => {
     });
   } catch (error) {
     console.error("error: ", error);
+    next(error);
     if (error.response.status === 404) {
       res.status(404).send({
         status: 404,
         msg: `${id} is nor exist, please check the id you entered`,
       });
     }
-    next(error);
   }
 };
 

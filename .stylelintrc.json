@@ -1,0 +1,15 @@
+{
+  "extends": "stylelint-config-standard",
+  "ignoreFiles": ["client/dist/**/*", "coverage/**/*"],
+  "rules": {
+    "font-family-name-quotes": null,
+    "color-function-notation": null,
+    "alpha-value-notation": null,
+    "shorthand-property-no-redundant-values": null,
+    "declaration-block-no-duplicate-properties": null,
+    "value-keyword-case": null,
+    "value-no-vendor-prefix": null,
+    "property-no-vendor-prefix": null,
+    "selector-class-pattern": null
+  }
+}

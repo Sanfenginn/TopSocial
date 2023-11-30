@@ -4,7 +4,6 @@ import { highline } from "@/js/database.js";
 // SET ALL THE HIGHLINE PICTURES, DESCRIPTION, AND PROFILE PHOTOS FROM DATABASE
 const middle = document.querySelector(".main-middle");
 const middleHighlineContainer = middle.querySelector(".highline-container");
-const middleHighline = middleHighlineContainer.querySelectorAll(".highline");
 const middleHighlineProfile =
   middleHighlineContainer.querySelectorAll(".highline__profile");
 const middleHighlinePicture =

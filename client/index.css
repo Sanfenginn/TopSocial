@@ -1,32 +1,32 @@
 /* import UNIVERSAL STYLES */
-@import "./src/css/universal.css";
+@import url("./src/css/universal.css");
 
 /* import FOUNDATION  */
-@import "./src/foundation/common.css";
+@import url("./src/foundation/common.css");
 
 /* import FRAMES */
-@import "./src/frames/header/header.css";
-@import "./src/frames/main/main.css";
-@import "./src/frames/main/main-left/main-left.css";
-@import "./src/frames/main/main-left/navbar/navbar.css";
-@import "./src/frames/main/main-left/profile/profile.css";
-@import "./src/frames/main/main-middle/main-middle.css";
-@import "./src/frames/main/main-middle/highline/highline.css";
-@import "./src/frames/main/main-middle//post-input/post-input.css";
-@import "./src/frames/main/main-middle//postCards/postCards.css";
-@import "./src/frames/main/main-right/main-right.css";
-@import "./src/frames/main/main-right//message/message.css";
-@import "./src/frames/main/main-right/request/request.css";
+@import url("./src/frames/header/header.css");
+@import url("./src/frames/main/main.css");
+@import url("./src/frames/main/main-left/main-left.css");
+@import url("./src/frames/main/main-left/navbar/navbar.css");
+@import url("./src/frames/main/main-left/profile/profile.css");
+@import url("./src/frames/main/main-middle/main-middle.css");
+@import url("./src/frames/main/main-middle/highline/highline.css");
+@import url("./src/frames/main/main-middle//post-input/post-input.css");
+@import url("./src/frames/main/main-middle//postCards/postCards.css");
+@import url("./src/frames/main/main-right/main-right.css");
+@import url("./src/frames/main/main-right//message/message.css");
+@import url("./src/frames/main/main-right/request/request.css");
 
 /* import COMPONENTS */
-@import "./src/components/button.css";
-@import "./src/components/profile.css";
-@import "./src/components/search.css";
-@import "./src/components/cards.css";
-@import "./src/components/post.css";
-@import "./src/components/highline.css";
-@import "./src/components/message-list.css";
-@import "./src/components/request.css";
+@import url("./src/components/button.css");
+@import url("./src/components/profile.css");
+@import url("./src/components/search.css");
+@import url("./src/components/cards.css");
+@import url("./src/components/post.css");
+@import url("./src/components/highline.css");
+@import url("./src/components/message-list.css");
+@import url("./src/components/request.css");
 
 /* import MEDIA */
-@import "./src/media/media.css";
+@import url("./src/media/media.css");

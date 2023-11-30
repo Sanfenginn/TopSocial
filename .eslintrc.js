@@ -1,26 +1,22 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": "eslint:recommended",
-    "overrides": [
-        {
-            "env": {
-                "node": true
-            },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
-        }
-    ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "rules": {
-    }
-}
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+    es2021: true,
+  },
+  extends: "eslint:recommended",
+  globals: {
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
+    plusSlides: "readonly",
+  },
+  parser: "@babel/eslint-parser",
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: "module",
+    requireConfigFile: false,
+  },
+  ignorePatterns: ["client/dist/**", "tests/**"],
+  rules: {},
+};

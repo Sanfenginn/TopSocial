@@ -1,7 +1,6 @@
 // link to the index.js outside of the routers folder, which is the parent router
 
 const express = require("express");
-const axios = require("axios");
 const profileRouter = require("./profile");
 const cardsRouter = require("./cards");
 const messageRouter = require("./message");
