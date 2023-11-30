@@ -1,10 +1,13 @@
 const axios = require("axios");
+const { getUrl } = require("../middlewares/getUrl");
+
+const uniqueUrl = "http://localhost:51002/message";
 
 const getMessage = async (req, res, next) => {
   try {
-    // const url = "http://localhost:51002/message";
-    const url = "http://project1.sanfenginn.com/api2/message";
-    const axiosResponse = await axios.get(url);
+    // const uniqueUrl = getUrl("message");
+
+    const axiosResponse = await axios.get(uniqueUrl);
     console.log("response: ", axiosResponse.data);
     res.status(200).send({
       status: 200,

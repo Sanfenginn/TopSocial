@@ -1,4 +1,7 @@
 const request = require("supertest");
+// require("dotenv").config();
+require("dotenv").config({ path: "./server/.env" });
+
 const app = require("../../server/index"); // 导入您的 Express 应用
 
 describe("API Endpoints", () => {

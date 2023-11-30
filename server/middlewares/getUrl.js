@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const getUrl = (path) => {
   const baseUrl = process.env.DATABASE_URL;
   if (typeof path === "string") {

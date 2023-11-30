@@ -38,10 +38,10 @@ jobs:
         working-directory: ./server
         run: npm ci
 
-      - name: Set Base URL
+      - name: Set DATABASE URL
         run: echo "DATABASE_URL=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
 
-      - name: Run tests
+      - name: Run Jest Test
         run: npm test
 
       - name: Check HTML
