@@ -19,11 +19,11 @@ const getWebsiteRunningMode = () => {
 
 //GET HTTP HEADER
 const getHttpProtocol = () => {
-  // if (getWebsiteRunningMode() === "development") {
-  return "http://";
-  // } else {
-  // return "https://";
-  // }
+  if (getWebsiteRunningMode() === "development") {
+    return "http://";
+  } else {
+    return "https://";
+  }
 };
 
 //SET A PROJECT TO GET ALL THE ATTRIBUTE THAT WE NEED FROM ARRAY THAT WE GOT FROM DATABASE
