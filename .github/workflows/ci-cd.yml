@@ -50,6 +50,7 @@ jobs:
       - name: Set Environment Variables
         run: |
           echo "DATABASE_URL=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
+          echo "VITE_DB_PATH=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
 
         # 进行后端jet，supertest 集成测试
       - name: Run Jest Test
@@ -66,12 +67,7 @@ jobs:
         # 进行前端单元测试
       - name: Run Unit Testing for client
         working-directory: ./client
-        env:
-          VITE_DB_PATH: ${{ secrets.DB_URL_TS }}
         run: npm run test
-
-      - name: Print Environment Variables
-        run: echo "VITE_DB_PATH = $VITE_DB_PATH"
 
         # 检查HTML代码
       - name: Check HTML

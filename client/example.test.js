@@ -4,6 +4,8 @@ import axios from "axios";
 import AxiosMockAdapter from "axios-mock-adapter";
 import { getPath } from "./src/js/utils.js";
 
+const dbPath = process.env.VITE_DB_PATH || import.meta.env.VITE_DB_PATH;
+
 // 导入您的函数
 import {
   getHighline,
