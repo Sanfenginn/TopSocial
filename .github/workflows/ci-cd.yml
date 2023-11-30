@@ -53,8 +53,6 @@ jobs:
 
       # 进行后端jet，supertest 集成测试,
       - name: Run Jest Test
-        # env:
-        #   DATABASE_URL: "http://project1.sanfenginn.com/api2/"
         run: npm test
 
       # 安装前端依赖
