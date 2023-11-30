@@ -1,9 +1,8 @@
-// example.test.js
-
 // 导入测试依赖
-import { describe, it, expect, beforeEach, afterEach } from "vitest";
+import { describe, it, expect, beforeEach, afterEach, test } from "vitest";
 import axios from "axios";
 import AxiosMockAdapter from "axios-mock-adapter";
+import { getPath } from "./src/js/utils.js";
 
 // 导入您的函数
 import {
@@ -12,9 +11,9 @@ import {
   getMessage,
   getCurrentUserProfile,
   getPostCards,
-} from "./src/js/database"; // 请替换为正确的路径
+} from "@/js/database"; // 请替换为正确的路径
 
-// 创建 axios mock 实例
+// 创建 axios mock 实例，拦截所有由axios发出的http请求，并且允许模拟http响应
 const mock = new AxiosMockAdapter(axios);
 
 // 测试套件
@@ -27,8 +26,10 @@ describe("API Calls Tests", () => {
   // 测试 getHighline
   it("should fetch highline data correctly", async () => {
     const expectedData = ["data1", "data2"];
-    mock.onGet("http://localhost:51002/highline").reply(200, expectedData);
-
+    const path = getPath("highline");
+    //定义我们希望返回的数据
+    mock.onGet(path).reply(200, expectedData);
+    //配置mock的响应，当请求到达时，返回我们定义的数据
     const data = await getHighline();
     expect(data).toEqual(expectedData);
   });

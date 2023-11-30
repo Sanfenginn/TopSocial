@@ -3,11 +3,7 @@ import path from "path-browserify";
 
 //GET FULLPATH
 const getPath = (...info) => {
-  // const dbPath = import.meta.env.VITE_DB_PATH;
-  process.env.VITE_DB_PATH = "localhost:51002";
-
-  const dbPath = process.env.VITE_DB_PATH;
-
+  const dbPath = import.meta.env.VITE_DB_PATH;
   const fullPath = getHttpProtocol() + path.join(dbPath, ...info);
   return fullPath;
 };
@@ -19,10 +15,10 @@ const getWebsiteRunningMode = () => {
 
 //GET HTTP HEADER
 const getHttpProtocol = () => {
-  if (getWebsiteRunningMode() === "development") {
-    return "http://";
-  } else {
+  if (getWebsiteRunningMode() === "productions") {
     return "https://";
+  } else {
+    return "http://";
   }
 };
 
