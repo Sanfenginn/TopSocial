@@ -10,7 +10,7 @@ export default defineConfig({
   test: {
     env: {
       MODE: "development", // 设置默认模式为 'test'
-      VITE_DB_PATH: process.env.VITE_DB_PATH, //"project1.sanfenginn.com/api2/",
+      VITE_DB_PATH: process.env.VITE_DB_PATH || "localhost:51002", //"project1.sanfenginn.com/api2/",
     },
     // 在此处添加你的测试配置
     globals: true,
@@ -20,7 +20,7 @@ export default defineConfig({
   },
   coverage: {
     // 覆盖率配置
-    reporter: ["lcov"],
+    reporter: ["json"],
     // 可以添加更多的覆盖率配置项，如 include, exclude 等
     dir: "./coverage_reports",
   },
