@@ -17,6 +17,12 @@ module.exports = {
     sourceType: "module",
     requireConfigFile: false,
   },
-  ignorePatterns: ["client/dist/**", "tests/**", "client/coverage/**"],
+  ignorePatterns: [
+    "**/*.spec.js",
+    "**/*.test.js",
+    "client/dist/**",
+    "tests/**",
+    "client/coverage/**",
+  ],
   rules: {},
 };
