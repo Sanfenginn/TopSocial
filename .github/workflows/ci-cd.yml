@@ -34,9 +34,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # - name: Install dependencies for server
-      #   working-directory: ./server
-      #   run: npm ci
+      - name: Install dependencies for server
+        working-directory: ./server
+        run: npm ci
+        # 不可以少，因为我们的工作目录是在server下，所以需要指定工作目录.且在cicd运行环境中在server中装依赖.
+        #在 CI/CD 环境中，由于每次构建开始时都是一个干净的环境，因此必须重新执行依赖安装步骤。
+        #如果不执行依赖安装步骤，那么在 CI/CD 环境中将无法找到任何依赖。
+        #如果在本地运行 npm install，那么将会在本地 node_modules 文件夹中安装依赖。
+        #如果在 CI/CD 环境中运行 npm install，那么将会在 CI/CD 环境中的 node_modules 文件夹中安装依赖。
+        #因此，如果在本地运行 npm install，那么在 CI/CD 环境中将无法找到任何依赖。
+        #因此，必须在 CI/CD 环境中重新执行依赖安装步骤。
 
       - name: Run tests
         run: npm test
