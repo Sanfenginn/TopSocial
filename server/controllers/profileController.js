@@ -2,8 +2,6 @@ const axios = require("axios");
 // need axios to get the datums from database(json server)
 const { getUrl } = require("../middlewares/getUrl");
 
-// const uniqueUrl = "http://localhost:51002/profile";
-
 const getProfile = async (req, res, next) => {
   try {
     const uniqueUrl = getUrl("profile");

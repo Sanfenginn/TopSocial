@@ -54,8 +54,9 @@ jobs:
         # 进行后端jet，supertest 集成测试,
       - name: Run Jest Test
         env:
-          DATABASE_URL: ${{ secrets.DB_URL_TS }}
+          DATABASE_URL: "project1.sanfenginn.com/api2/"
         run: npm test
+        #${{ secrets.DB_URL_TS }}
 
       # 安装前端依赖
       - name: Install dependencies for client
