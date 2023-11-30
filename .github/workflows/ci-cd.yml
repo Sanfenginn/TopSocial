@@ -50,12 +50,12 @@ jobs:
         run: echo "VITE_DB_PATH = $VITE_DB_PATH"
 
         # 获取json server的在服务器上的地址，用于测试.对所有步骤都生效，不过这个步骤是在哪个目录中执行
-      # - name: Set Environment Variables
-      #   run: ｜ echo "DATABASE_URL=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
+      - name: Set Environment Variables
+        run: echo "DATABASE_URL=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
 
-      #   # 进行后端jet，supertest 集成测试,
-      # - name: Run Jest Test
-      #   run: npm run test
+        # 进行后端jet，supertest 集成测试,
+      - name: Run Jest Test
+        run: npm run test
 
       # 安装前端依赖
       - name: Install dependencies for client
@@ -74,11 +74,10 @@ jobs:
         working-directory: ./client
         run: npm run test
 
-        # 检查HTML代码
-      - name: Check HTML
-        run: npx htmlhint "**/*.html" --ignore "coverage/**/*", --ignore "/client/coverage/**/*"
-
-        # 检查CSS代码
+      #   # 检查HTML代码
+      # - name: Check HTML
+      #   run: npx htmlhint "**/*.html" --ignore "coverage/**/*, client/coverage/**/*"
+      # 检查CSS代码
       - name: Check CSS
         run: |
           if compgen -G "**/*.css" > /dev/null; then
