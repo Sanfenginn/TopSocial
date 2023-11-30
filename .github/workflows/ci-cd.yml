@@ -76,7 +76,7 @@ jobs:
 
         # 检查HTML代码
       - name: Check HTML
-        run: npx htmlhint "**/*.html" --ignore "coverage/**/*, /client/coverage/**/*"
+        run: npx htmlhint "**/*.html" --ignore "coverage/**/*", --ignore "/client/coverage/**/*"
 
         # 检查CSS代码
       - name: Check CSS
