@@ -2,7 +2,7 @@
 import { describe, it, expect, beforeEach, afterEach, test } from "vitest";
 import axios from "axios";
 import AxiosMockAdapter from "axios-mock-adapter";
-import { getPath } from "./src/js/utils.js";
+import { getPath } from "./utils.js";
 
 // 导入您的函数
 import {
