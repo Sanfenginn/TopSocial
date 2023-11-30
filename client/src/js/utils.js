@@ -4,8 +4,6 @@ import path from "path-browserify";
 //GET FULLPATH
 const getPath = (...info) => {
   const dbPath = import.meta.env.VITE_DB_PATH;
-  // const dbPath = "localhost:51002";
-
   const fullPath = getHttpProtocol() + path.join(dbPath, ...info);
   return fullPath;
 };
