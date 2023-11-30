@@ -7,12 +7,15 @@ on:
     branches: [main]
 
 jobs:
+  # 自动化测试
   build:
     runs-on: ubuntu-latest
     # CI只在Pull Request事件时运行，但不包括Pull Request被关闭的情况.
     if: >
       github.event_name == 'pull_request' &&
       github.event.action != 'closed'
+
+    # 选择Node.js 版本为 20.x.
     strategy:
       matrix:
         node-version: [20.x]
@@ -20,33 +23,54 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      # 强直清空npm缓存，避免出现奇怪的问题.
       - name: Clear npm cache
         run: npm cache clean --force
 
+        # 安装Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
 
+        # 检查SSH版本，用于调试.
       - name: Check SSH version
         run: ssh -V
 
+        # 安装项目根目录下的依赖.
       - name: Install dependencies
         run: npm ci
 
+        # 安装server目录下的依赖.
       - name: Install dependencies for server
         working-directory: ./server
         run: npm ci
 
-      - name: Set DATABASE URL
-        run: echo "DATABASE_URL=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
+        # 获取json server的在服务器上的地址，用于测试.对所有步骤都生效，不过这个步骤是在哪个目录中执行
+      - name: Set Environment Variables
+        run: |
+          echo "DATABASE_URL=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
+          echo "VITE_DB_PATH=${{ secrets.DB_URL_TS }}" >> $GITHUB_ENV
 
+        # 进行后端jet，supertest 集成测试
       - name: Run Jest Test
         run: npm test
 
-      - name: Check HTML
-        run: npx htmlhint "**/*.html" --ignore "coverage/**/*"
+        # 安装前端依赖
+      - name: Install dependencies for client
+        working-directory: ./client
+        run: npm ci
 
+        # 进行前端单元测试
+      - name: Run Vitest Test for client
+        working-directory: ./client
+        run: npm run test
+
+        # 检查HTML代码
+      - name: Check HTML
+        run: npx htmlhint "**/*.html" --ignore "coverage/**/*" "client/coverage/**/*"
+
+        # 检查CSS代码
       - name: Check CSS
         run: |
           if compgen -G "**/*.css" > /dev/null; then
@@ -55,6 +79,7 @@ jobs:
             echo "No CSS files found, skipping stylelint."
           fi
 
+        # 检查Javascript代码
       - name: Check JavaScript
         run: |
           if compgen -G "**/*.js" > /dev/null; then
@@ -63,12 +88,14 @@ jobs:
             echo "No JavaScript files found, skipping eslint."
           fi
 
+        # 进行SonarCloud扫描代码质量，安全审查
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
+  # 自动化部署
   # CD
   deploy:
     runs-on: ubuntu-latest
