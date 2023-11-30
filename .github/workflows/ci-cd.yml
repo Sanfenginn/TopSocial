@@ -74,10 +74,11 @@ jobs:
         working-directory: ./client
         run: npm run test
 
-      #   # 检查HTML代码
-      # - name: Check HTML
-      #   run: npx htmlhint "**/*.html" --ignore "coverage/**/*, client/coverage/**/*"
-      # 检查CSS代码
+        # 检查HTML代码
+      - name: Check HTML
+        run: npx htmlhint "**/*.html" --ignore "coverage/**/*, client/coverage/**/*"
+
+        # 检查CSS代码
       - name: Check CSS
         run: |
           if compgen -G "**/*.css" > /dev/null; then
