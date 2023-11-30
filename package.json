@@ -5,13 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "test:watch": "jest --watch",
-    "test:backend": "jest --coverage --config jest.backend.config.js"
+    "test:watch": "jest --watch"
   },
   "jest": {
     "testEnvironment": "node",
     "coverageDirectory": "coverage",
-    "collectCoverage": true
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "server/**/*.js"
+    ],
+    "testMatch": [
+      "**/tests/backend/**/*api.test.js"
+    ]
   },
   "keywords": [],
   "author": "",
