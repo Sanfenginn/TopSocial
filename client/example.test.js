@@ -28,7 +28,7 @@ describe("API Calls Tests", () => {
     const expectedData = ["data1", "data2"];
     const path = getPath("highline");
     //定义我们希望返回的数据
-    mock.onGet(path).reply(200, expectedData);
+    mock.onGet(path.replace("http://", "")).reply(200, expectedData);
     //配置mock的响应，当请求到达时，返回我们定义的数据
     const data = await getHighline();
     expect(data).toEqual(expectedData);
