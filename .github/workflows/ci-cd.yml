@@ -54,7 +54,7 @@ jobs:
 
         # 进行后端jet，supertest 集成测试
       - name: Run Jest Test
-        run: npm test
+        run: npm run test
 
         # 安装前端依赖
       - name: Install dependencies for client
@@ -62,7 +62,7 @@ jobs:
         run: npm ci
 
         # 进行前端单元测试
-      - name: Run Vitest Test for client
+      - name: Run Unit Testing for client
         working-directory: ./client
         run: npm run test
 
