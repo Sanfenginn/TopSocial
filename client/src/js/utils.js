@@ -17,6 +17,8 @@ const getWebsiteRunningMode = () => {
 const getHttpProtocol = () => {
   if (getWebsiteRunningMode() === "productions") {
     return "https://";
+  } else if (getWebsiteRunningMode() === "cicd") {
+    return "";
   } else {
     return "http://";
   }
