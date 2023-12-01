@@ -1,10 +1,10 @@
 const axios = require("axios");
+const { getUrl } = require("../middlewares/getUrl");
 
 const getRequest = async (req, res, next) => {
   try {
-    // const url = "http://localhost:51002/request";
-    const url = "http://project1.sanfenginn.com/api2/request";
-    const axiosResponse = await axios.get(url);
+    const uniqueUrl = getUrl("request");
+    const axiosResponse = await axios.get(uniqueUrl);
     console.log("response: ", axiosResponse.data);
     res.status(200).json({
       status: 200,

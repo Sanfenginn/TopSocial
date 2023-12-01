@@ -1,6 +1,7 @@
 //require some modules
 const express = require("express");
 const cors = require("cors");
+require("dotenv").config();
 
 // create an web server
 const app = express();

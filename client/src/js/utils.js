@@ -4,21 +4,23 @@ import path from "path-browserify";
 //GET FULLPATH
 const getPath = (...info) => {
   const dbPath = import.meta.env.VITE_DB_PATH;
+  console.log("dbPath", dbPath);
   const fullPath = getHttpProtocol() + path.join(dbPath, ...info);
   return fullPath;
 };
 
 //GET WEBSITE RUNNING MODE
-const getWebsiteRunningMode = () => {
+export const getWebsiteRunningMode = () => {
+  console.log("mode", import.meta.env.MODE);
   return import.meta.env.MODE;
 };
 
 //GET HTTP HEADER
-const getHttpProtocol = () => {
-  if (getWebsiteRunningMode() === "development") {
-    return "http://";
-  } else {
+export const getHttpProtocol = () => {
+  if (getWebsiteRunningMode() === "production") {
     return "https://";
+  } else {
+    return "http://";
   }
 };
 

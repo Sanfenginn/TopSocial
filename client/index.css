@@ -1,5 +1,6 @@
 /* import UNIVERSAL STYLES */
 @import url("./src/css/universal.css");
+@import url("./src/css/navbar.css");
 
 /* import FOUNDATION  */
 @import url("./src/foundation/common.css");
