@@ -9,8 +9,8 @@ export default defineConfig({
   },
   test: {
     env: {
-      MODE: "cicd", // 设置默认模式为 'test'
-      VITE_DB_PATH: "test", // process.env.VITE_DB_PATH || "localhost:51002",
+      MODE: "test", // 设置默认模式为 'test'
+      VITE_DB_PATH: "test",
     },
     coverage: {
       // 覆盖率配置
