@@ -33,13 +33,12 @@
 }
 
 .message-container .options p:hover {
-  cursor: pointer;
   box-shadow: inset 0 2px 4px rgb(0 0 0 /20%);
   border-radius: 10px;
   background-color: var(--color-white);
 }
 
-.message-container .options p::after {
+.message-container .options p.active::after {
   content: "";
   position: absolute;
   left: 0;
@@ -48,10 +47,8 @@
   height: 0.7vh;
   transition: background-color 0.3s;
   border-radius: 5px;
-}
-
-.message-container .options p:hover::after {
-  background-color: var(--color-black);
+  background-color: var(--color-primary);
+  filter: brightness(150%);
 }
 
 .message-list {

@@ -7,6 +7,7 @@ import { profile } from "@/js/database.js";
 import "./src/frames/main/main-middle/highline/highline";
 import "./src/frames/main/main-middle/postCards/postCards";
 import "./src/frames/main/main-right/message/message";
+import "./src/frames/main/main-right/message/options";
 import "./src/frames/main/main-right/request/request";
 
 //SET THE PROFILE PHOTO OF CURRENT USER
