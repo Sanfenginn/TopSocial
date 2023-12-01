@@ -1,6 +1,6 @@
 /* import UNIVERSAL STYLES */
 @import url("./src/css/universal.css");
-@import url("./src/css/navbar.css");
+@import url("./src/css/sidebar.css");
 
 /* import FOUNDATION  */
 @import url("./src/foundation/common.css");

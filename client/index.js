@@ -4,7 +4,7 @@ import "./index.css";
 import { profile } from "@/js/database.js";
 
 // IMPORT ALL THE JS FILES
-import "./src/css/navbar";
+import "./src/css/sidebar";
 import "./src/components/cards";
 import "./src/frames/main/main-middle/highline/highline";
 import "./src/frames/main/main-middle/postCards/postCards";

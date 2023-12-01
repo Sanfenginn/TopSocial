@@ -10,7 +10,7 @@
   background-color: rgb(255 255 255 / 95%);
   z-index: 1000;
   padding: 3%;
-  transform: translateX(-100%);
+  transform: translateX(-1000%);
   transition: transform 0.3s ease-out;
   border-radius: 0 3px 3px 0;
   border-color: #6b8e95;
