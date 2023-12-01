@@ -27,7 +27,7 @@ describe("API Calls Tests", () => {
   it("should fetch highline data correctly", async () => {
     const expectedData = ["data1", "data2"];
     const path = getPath("highline");
-    console.log(path);
+    console.log("test", path);
     //定义我们希望返回的数据
     mock.onGet(path).reply(200, expectedData);
     //配置mock的响应，当请求到达时，返回我们定义的数据
