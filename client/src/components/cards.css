@@ -20,3 +20,7 @@
 .message-card {
   padding: 2% 3% 7%;
 }
+
+.card-touch-shadow {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+}

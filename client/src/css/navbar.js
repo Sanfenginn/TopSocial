@@ -33,3 +33,8 @@ document.addEventListener("click", function (event) {
     clearTimeout(navTimeout); // 清除定时器
   }
 });
+
+window.addEventListener("resize", () => {
+  closeNav();
+  clearTimeout(navTimeout); // 清除定时器
+});
