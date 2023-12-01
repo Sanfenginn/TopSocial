@@ -21,7 +21,7 @@ export default defineConfig({
     },
     // 在此处添加你的测试配置
     globals: true,
-    environment: "node", //"jsdom", // 如果你的测试依赖于DOM或浏览器API
+    environment: "jsdom", //"jsdom", // 如果你的测试依赖于DOM或浏览器API
     include: ["client/src/**/*.test.js", "client/src/**/*.spec.js"], // 包含哪些文件，支持 glob 模式
     // exclude: ["src/**/*.ignore.js"], // 排除哪些文件，支持 glob 模式
   },
