@@ -1,5 +1,5 @@
-const navbar = document.querySelector(".bar");
-const barIcon = document.querySelector(".bar-icon");
+const navbar = document.querySelector(".sidebar");
+const barIcon = document.querySelector(".sidebar-icon");
 
 let navTimeout; // 用于存储定时器ID的变量
 

@@ -1,4 +1,4 @@
-.bar {
+.sidebar {
   position: absolute;
   top: clamp(35px, 5vh, 60px);
   display: flex;
@@ -16,14 +16,14 @@
   border-color: #6b8e95;
   border-style: solid;
   border-width: 1.5px 1.5px 0 0;
+}
+
+.sidebar.open {
+  transform: translateX(0);
   box-shadow: 5px 0 15px rgb(0 0 0 / 20%);
 }
 
-.bar.open {
-  transform: translateX(0);
-}
-
-.bar a {
+.sidebar a {
   padding: 10%;
   font-weight: bold;
   display: flex;
@@ -31,17 +31,17 @@
   cursor: pointer;
 }
 
-.bar a:hover {
+.sidebar a:hover {
   background-color: #6b8e95;
   transition: all 0.3s ease-in;
   border-radius: 10px;
 }
 
-.bar a i {
+.sidebar a i {
   margin-right: 6%;
 }
 
-.bar-icon {
+.sidebar-icon {
   color: #818181;
   z-index: 2;
   cursor: pointer;
