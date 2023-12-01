@@ -64,7 +64,7 @@ jobs:
         run: |
           echo "VITE_DB_PATH=${{ secrets.DB_URL_TS_CLIENT }}" >> $GITHUB_ENV
 
-          # 进行前端单元测试
+        # 进行前端单元测试，
       - name: Run Unit Testing for client
         # working-directory: ./client
         run: npm run test:client
