@@ -42,16 +42,16 @@ describe("API Calls Tests", () => {
   it("should fetch request data correctly", async () => {
     const expectedData = [
       {
-        id: 1,
-        mutualFriendNum: 8,
-        name: "Hajia Bintu",
-        src: "./src/images/profile/profile_7.png",
+        id: "",
+        mutualFriendNum: "",
+        name: "",
+        src: "",
       },
       {
-        id: 2,
-        mutualFriendNum: 19,
-        name: "Jackline Mensah",
-        src: "./src/images/profile/profile_8.png",
+        id: "",
+        mutualFriendNum: "",
+        name: "",
+        src: "",
       },
     ];
     const path = getPath("request");
@@ -64,34 +64,16 @@ describe("API Calls Tests", () => {
   it("should fetch message data correctly", async () => {
     const expectedData = [
       {
-        id: 1,
-        src: "./src/images/profile/profile_2.png",
-        name: "Tomas Li",
-        msg: "Hi, Long time no see!",
+        id: "",
+        src: "",
+        name: "",
+        msg: "",
       },
       {
-        id: 2,
-        src: "./src/images/profile/profile_3.png",
-        name: "Lana Rose",
-        msg: "Birthday Tomorrow!",
-      },
-      {
-        id: 3,
-        src: "./src/images/profile/profile_4.png",
-        name: "No One",
-        msg: "lol u right.",
-      },
-      {
-        id: 4,
-        src: "./src/images/profile/profile_5.png",
-        name: "Emily",
-        msg: "emm, sounds good.",
-      },
-      {
-        //       id: 5,
-        src: "./src/images/profile/profile_6.png",
-        name: "Alex",
-        msg: "hang on, give me a sec.",
+        id: "",
+        src: "",
+        name: "",
+        msg: "",
       },
     ];
     const path = getPath("message");
@@ -103,119 +85,60 @@ describe("API Calls Tests", () => {
   // 测试 getCurrentUserProfile
   it("should fetch current user profile correctly", async () => {
     const expectedData = {
-      name: "Jinyuan Zhang",
-      at: "@Jinyuanzhang1992",
-      img_src: "./src/images/profile/profile_18.jpg",
+      name: "",
+      at: "",
+      img_src: "",
     };
-
     const path = getPath("profile");
     mock.onGet(path).reply(200, expectedData);
     const data = await getCurrentUserProfile();
     expect(data).toEqual(expectedData);
   });
+
+  // 测试 getPostCards
   it("should fetch post cards data correctly", async () => {
     const expectedData = [
       {
         id: 1,
         profile: {
-          src: "./src/images/profile/profile_18.jpg",
-          name: "Jinyuan Zhang",
-          position: "Darwin",
-          time: 15,
+          src: "",
+          name: "",
+          position: "",
+          time: "",
         },
         picture: {
-          img_src: "./src/images/post/post_5.jpeg",
+          img_src: "",
         },
         comment: {
-          img_src_list: [
-            "./src/images/profile/profile_5.png",
-            "./src/images/profile/profile_6.png",
-            "./src/images/profile/profile_7.png",
-          ],
-          first_people_name: "Ernest Achiever",
-          like_peoples_number: 462,
-          comment_info:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia expedita repellendus harum beatae? #Trip",
-          view_number: 3456,
+          img_src_list: ["", "", ""],
+          first_people_name: "",
+          like_peoples_number: "",
+          comment_info: "",
+          view_number: "",
         },
       },
       {
-        id: 2,
+        id: 1,
         profile: {
-          src: "./src/images/profile/profile_3.png",
-          name: "Lana Rose",
-          position: "Brisbane",
-          time: 29,
+          src: "",
+          name: "",
+          position: "",
+          time: "",
         },
         picture: {
-          img_src: "./src/images/post/post_6.jpeg",
+          img_src: "",
         },
         comment: {
-          img_src_list: [
-            "./src/images/profile/profile_5.png",
-            "./src/images/profile/profile_6.png",
-            "./src/images/profile/profile_7.png",
-          ],
-          first_people_name: "John Doe",
-          like_peoples_number: 7473,
-          comment_info:
-            " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure. #Fitness",
-          view_number: 19332,
-        },
-      },
-      {
-        id: 3,
-        profile: {
-          src: "./src/images/profile/profile_4.png",
-          name: "Lana Rose",
-          position: "Perth",
-          time: 40,
-        },
-        picture: {
-          img_src: "./src/images/post/post_7.jpeg",
-        },
-        comment: {
-          img_src_list: [
-            "./src/images/profile/profile_5.png",
-            "./src/images/profile/profile_6.png",
-            "./src/images/profile/profile_7.png",
-          ],
-          first_people_name: "Andy Rose",
-          like_peoples_number: 2323,
-          comment_info:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, deleniti. #Studying",
-          view_number: 322,
-        },
-      },
-      {
-        id: 4,
-        profile: {
-          src: "./src/images/profile/profile_5.png",
-          name: "Lana Rose",
-          position: "Sydney",
-          time: 55,
-        },
-        picture: {
-          img_src: "./src/images/post/post_8.jpeg",
-        },
-        comment: {
-          img_src_list: [
-            "./src/images/profile/profile_5.png",
-            "./src/images/profile/profile_6.png",
-            "./src/images/profile/profile_7.png",
-          ],
-          first_people_name: "Andrew Smith",
-          like_peoples_number: 2122,
-          comment_info:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit.  #Happy",
-          view_number: 558,
+          img_src_list: ["", "", ""],
+          first_people_name: "",
+          like_peoples_number: "",
+          comment_info: "",
+          view_number: "",
         },
       },
     ];
-
     const path = getPath("cards");
     mock.onGet(path).reply(200, expectedData);
-
     const data = await getPostCards();
     expect(data).toEqual(expectedData);
   });
