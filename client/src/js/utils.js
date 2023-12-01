@@ -10,13 +10,13 @@ const getPath = (...info) => {
 };
 
 //GET WEBSITE RUNNING MODE
-const getWebsiteRunningMode = () => {
+export const getWebsiteRunningMode = () => {
   console.log("mode", import.meta.env.MODE);
   return import.meta.env.MODE;
 };
 
 //GET HTTP HEADER
-const getHttpProtocol = () => {
+export const getHttpProtocol = () => {
   if (getWebsiteRunningMode() === "production") {
     return "https://";
   } else {
