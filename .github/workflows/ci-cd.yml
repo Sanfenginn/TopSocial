@@ -60,10 +60,9 @@ jobs:
         working-directory: ./client
         run: npm ci
 
-      - name: Set Environment Variables for client
-        run: |
-          echo "VITE_DB_PATH=${{ secrets.DB_URL_TS_CLIENT }}" >> $GITHUB_ENV
-
+      # - name: Set Environment Variables for client
+      #   run: |
+      #     echo "VITE_DB_PATH=${{ secrets.DB_URL_TS_CLIENT }}" >> $GITHUB_ENV
       # - name: Set Environment Variables
       #   run: |
       #     echo "VITE_TEST_ENV=true" >> $GITHUB_ENV

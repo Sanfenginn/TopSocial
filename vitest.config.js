@@ -10,7 +10,7 @@ export default defineConfig({
   test: {
     env: {
       MODE: "cicd", // 设置默认模式为 'test'
-      VITE_DB_PATH: process.env.VITE_DB_PATH || "localhost:51002",
+      VITE_DB_PATH: "test", // process.env.VITE_DB_PATH || "localhost:51002",
     },
     coverage: {
       // 覆盖率配置
@@ -21,7 +21,7 @@ export default defineConfig({
     },
     // 在此处添加你的测试配置
     globals: true,
-    environment: "jsdom", //"jsdom", // 如果你的测试依赖于DOM或浏览器API
+    environment: "jsdom", //"node", // 如果你的测试依赖于DOM或浏览器API
     include: ["client/src/**/*.test.js", "client/src/**/*.spec.js"], // 包含哪些文件，支持 glob 模式
     // exclude: ["src/**/*.ignore.js"], // 排除哪些文件，支持 glob 模式
   },

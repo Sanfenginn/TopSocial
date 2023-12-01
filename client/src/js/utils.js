@@ -3,7 +3,14 @@ import path from "path-browserify";
 
 //GET FULLPATH
 const getPath = (...info) => {
+  // let dbPath;
+  // if (import.meta.env.MODE === "cicd") {
+  //   dbPath = "cicd";
+  // } else {
+  //   dbPath = import.meta.env.VITE_DB_PATH;
+  // }
   const dbPath = import.meta.env.VITE_DB_PATH;
+  // const dbPath = "ddd";
   console.log("dbPath", dbPath);
   const fullPath = getHttpProtocol() + path.join(dbPath, ...info);
   return fullPath;
