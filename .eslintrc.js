@@ -21,8 +21,9 @@ module.exports = {
     "**/*.spec.js",
     "**/*.test.js",
     "client/dist/**",
-    "tests/**",
-    "client/coverage/**",
+    "coverage/**",
+    "vitest.config.js",
+    "jest.config.js",
   ],
   rules: {},
 };
