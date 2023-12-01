@@ -10,14 +10,13 @@
   background-color: rgb(255 255 255 / 95%);
   z-index: 1000;
   padding: 3%;
-  transform: translateX(-1000%);
-  transition: transform 0.3s ease-out;
+  transform: translateX(-150%);
+  transition: transform 0.8s ease-out;
   border-radius: 0 3px 3px 0;
   border-color: #6b8e95;
   border-style: solid;
   border-width: 1.5px 1.5px 0 0;
-  width: 40vw;
-  max-width: 210px;
+  width: clamp(170px, 40vw, 250px);
 }
 
 .sidebar-frame {
