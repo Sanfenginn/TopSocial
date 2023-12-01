@@ -2,16 +2,18 @@
   display: flex;
   flex-direction: column;
   padding-left: 5%;
+  min-width: 226.133px;
 }
 
 .main-left .navbar a {
   padding: 4.5%;
   font-weight: bold;
+  display: flex;
+  border-radius: 10px;
 }
 
 .main-left .navbar a:hover {
   background-color: var(--color-white);
-  border-radius: 10px;
   transition: all 0.3s ease-in;
   cursor: pointer;
 }
