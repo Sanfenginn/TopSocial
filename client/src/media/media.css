@@ -11,7 +11,7 @@
 }
 
 @media only screen and (width <= 1024px) {
-  .bar {
+  .sidebar-icon {
     display: flex;
   }
 

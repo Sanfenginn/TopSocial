@@ -42,6 +42,7 @@
 }
 
 .sidebar-icon {
+  display: none;
   color: #818181;
   z-index: 2;
   cursor: pointer;
