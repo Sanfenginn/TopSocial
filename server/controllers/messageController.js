@@ -1,6 +1,5 @@
 const axios = require("axios");
-const { getUrl } = require("../middlewares/getUrl");
-
+const { getUrl } = require("../utility/getUrl");
 
 const getMessage = async (req, res, next) => {
   try {

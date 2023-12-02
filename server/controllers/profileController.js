@@ -1,6 +1,6 @@
 const axios = require("axios");
 // need axios to get the datums from database(json server)
-const { getUrl } = require("../middlewares/getUrl");
+const { getUrl } = require("../utility/getUrl");
 
 const getProfile = async (req, res, next) => {
   try {

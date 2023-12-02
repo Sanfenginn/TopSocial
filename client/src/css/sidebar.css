@@ -49,7 +49,6 @@
 .sidebar-icon {
   display: none;
   color: #818181;
-  z-index: 2;
   cursor: pointer;
   animation: scale-up-down 2s infinite alternate ease-in-out;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* 透明度降低到0.3 */

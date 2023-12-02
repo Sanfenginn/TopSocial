@@ -21,7 +21,7 @@
         "src": "./src/images/profile/profile_18.jpg",
         "name": "Jinyuan Zhang",
         "position": "Darwin",
-        "time": 15
+        "time": 30
       },
       "picture": {
         "img_src": "./src/images/post/post_5.jpeg"
@@ -36,7 +36,11 @@
         "like_peoples_number": 462,
         "comment_info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia expedita repellendus harum beatae? #Trip",
         "view_number": 3456
-      }
+      },
+      "src": "./src/images/profile/profile_18.jpg",
+      "name": "Jinyuan Zhang",
+      "position": "Darwin",
+      "time": 30
     },
     {
       "id": 2,

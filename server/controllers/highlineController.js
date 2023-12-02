@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { getUrl } = require("../middlewares/getUrl");
+const { getUrl } = require("../utility/getUrl");
 
 const uniqueUrl = getUrl("highline");
 

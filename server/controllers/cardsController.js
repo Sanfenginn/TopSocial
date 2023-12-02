@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { getUrl } = require("../middlewares/getUrl");
+const { getUrl } = require("../utility/getUrl");
 
 const uniqueUrl = getUrl("cards");
 
@@ -102,4 +102,66 @@ const deleteCardById = async (req, res, next) => {
   }
 };
 
-module.exports = { getCards, getCardsById, postCards, deleteCardById };
+const updateCardByPut = async (req, res, next) => {
+  const newInfo = req.body;
+  const { id } = req.params;
+  console.log("newInfo: ", newInfo);
+  console.log("id: ", id);
+  if (!id || !newInfo) {
+    return res.status(400).send("id and profile are required");
+  }
+  try {
+    const axiosResponse = await axios.put(`${uniqueUrl}/${id}`, newInfo, {
+      headers: { "Content-Type": "application/json" },
+    });
+    console.log("response: ", axiosResponse.data);
+    res.status(200).json({
+      msg: "update card successfully",
+      data: axiosResponse.data,
+    });
+  } catch (error) {
+    console.error("error: ", error);
+    next(error);
+  }
+};
+
+const updateCardByPatch = async (req, res, next) => {
+  const { id } = req.params;
+  const updatedInfo = req.body;
+  console.log("id: ", id);
+  console.log("updatedInfo: ", updatedInfo);
+  if (!id || !updatedInfo) {
+    return res.status(400).send("id and profile are required");
+  }
+  try {
+    const currentData = await axios.get(`${uniqueUrl}/${id}`);
+    // const mergeData = {
+    //   profile: {
+    //     ...currentData.data.profile,
+    //     ...updatedInfo,
+    //   },
+    // };
+    const newData = { ...currentData.data.profile, ...updatedInfo };
+    const mergeData = JSON.stringify({ profile: newData });
+    const axiosResponse = await axios.patch(`${uniqueUrl}/${id}`, mergeData, {
+      headers: { "Content-Type": "application/json" },
+    });
+    console.log("response: ", axiosResponse.data);
+    res.status(200).json({
+      msg: "update card successfully",
+      data: axiosResponse.data,
+    });
+  } catch (error) {
+    console.error("error: ", error);
+    next(error);
+  }
+};
+
+module.exports = {
+  getCards,
+  getCardsById,
+  postCards,
+  deleteCardById,
+  updateCardByPut,
+  updateCardByPatch,
+};
