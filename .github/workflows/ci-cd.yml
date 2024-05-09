@@ -113,5 +113,5 @@ jobs:
             git fetch --all
             git reset --hard origin/main
             git clean -df
-            sudo chmod -R 755 /home/ubuntu/TopSocial
+            sudo chmod -R 755 /home/ubuntu/jinyuanzhang/TopSocial
             sudo systemctl reload apache2
